@@ -2,6 +2,7 @@ using Guna.UI2.Designer;
 using Guna.UI2.WinForms;
 using Guna.Charts.WinForms;
 using HerramientasTotal.Views;
+using HerramientasTotal.Views.Productos;
 
 
 
@@ -87,11 +88,13 @@ namespace HerramientasTotal
         private void btnCatalogo_Click(object sender, EventArgs e)
         {
             BotonSeleccionado(btnCatalogo);
+            ShowView<CatalogoUC>();
         }
 
         private void btnCarrito_Click(object sender, EventArgs e)
         {
             BotonSeleccionado(btnCarrito);
+            ShowView<CarritoUC>();
         }
 
         private void btnFacturas_Click(object sender, EventArgs e)
@@ -107,6 +110,7 @@ namespace HerramientasTotal
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
+            Environment.Exit(0);
         }
 
     }

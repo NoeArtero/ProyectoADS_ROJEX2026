@@ -1,6 +1,6 @@
 ﻿namespace ProyectoADS_ROJEX
 {
-    partial class Login
+    partial class LoginInicio
     {
         /// <summary>
         /// Required designer variable.
@@ -499,7 +499,7 @@
             guna2Panel3.Size = new Size(54, 71);
             guna2Panel3.TabIndex = 0;
             // 
-            // Login
+            // LoginInicio
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -508,7 +508,7 @@
             Controls.Add(tblCredenciales);
             Controls.Add(panelHeader);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "Login";
+            Name = "LoginInicio";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
             WindowState = FormWindowState.Maximized;

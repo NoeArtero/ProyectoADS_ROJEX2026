@@ -4,20 +4,19 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Windows.Forms;
 
 namespace ProyectoADS_ROJEX
 {
-    public partial class Login : Form
+    public partial class LoginInicio : Form
     {
-        public Login()
+        public LoginInicio()
         {
             InitializeComponent();
         }
-
-
-        //parte para centrar elementos
+        // apartado para métodos
         private void CentrarControl(Control control, Control contenedor)
         {
             control.Left = (contenedor.Width - control.Width) / 2;
@@ -38,6 +37,25 @@ namespace ProyectoADS_ROJEX
             btnCancelar.Left = btnIngresar.Right + espacioEntreBotones;
             btnCancelar.Top = y;
         }
+
+        private bool valido()
+        {
+            bool valido = false;
+
+            if (txtNombreIngreso.Text.IsWhiteSpace() || txtContra.Text.IsWhiteSpace())
+            {
+                valido = false;
+            }
+            else
+            {
+                valido = true;
+            }
+
+            return valido;
+        }
+
+        //parte para centrar elementos
+
         private void Login_Load(object sender, EventArgs e)
         {
             CentrarControl(lblTitulo, panelCentro);
@@ -61,13 +79,21 @@ namespace ProyectoADS_ROJEX
         // fin parte para centrar elementos
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            InicioView inicioView = new InicioView();
-            inicioView.Show();
+            if (!valido())
+            {
+                MessageBox.Show("Uno de los espacios está vacío, ingrese sus credenciales completas", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                InicioView inicioView = new InicioView();
+                inicioView.Show();
+            }
 
         }
     }

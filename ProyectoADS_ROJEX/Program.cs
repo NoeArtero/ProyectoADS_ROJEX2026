@@ -1,19 +1,33 @@
 using HerramientasTotal;
+using Microsoft.VisualBasic.Logging;
+using ProyectoADS_ROJEX.ConexionDB;
 
 namespace ProyectoADS_ROJEX
 {
     internal static class Program
     {
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Login());
+
+            try
+            {
+                Conexion.Initialize();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No fue posible preparar la BD.\n\n" + ex.Message, "Rojex - Error");
+                return;
+            }
+
+            using (var login = new LoginInicio())
+            {
+                if (login.ShowDialog() != DialogResult.OK)
+                    return;
+            }
+
+            Application.Run(new LoginInicio());
         }
     }
 }
