@@ -1,8 +1,9 @@
-using Guna.UI2.Designer;
 using Guna.UI2.WinForms;
-using Guna.Charts.WinForms;
 using HerramientasTotal.Views;
 using HerramientasTotal.Views.Productos;
+using ProyectoADS_ROJEX.Views;
+using ProyectoADS_ROJEX.Views.Perfil;
+
 
 
 
@@ -100,11 +101,14 @@ namespace HerramientasTotal
         private void btnFacturas_Click(object sender, EventArgs e)
         {
             BotonSeleccionado(btnFacturas);
+            ShowView<FacturasUC>();
         }
 
         private void btnPerfil_Click(object sender, EventArgs e)
         {
             BotonSeleccionado(btnPerfil);
+            ShowView<UsuarioPerfil>();
+
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

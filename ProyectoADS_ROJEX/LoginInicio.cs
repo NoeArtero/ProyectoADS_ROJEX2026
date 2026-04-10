@@ -1,12 +1,5 @@
 ﻿using HerramientasTotal;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Windows.Forms;
+using ProyectoADS_ROJEX.Views.NuevoUsuario;
 
 namespace ProyectoADS_ROJEX
 {
@@ -26,7 +19,7 @@ namespace ProyectoADS_ROJEX
         {
             int espacioEntreBotones = 15;
 
-            int anchoTotal = btnIngresar.Width + btnCancelar.Width + espacioEntreBotones;
+            int anchoTotal = btnIngresar.Width + btnCancelar.Width + btnNuevoUsuario.Width + espacioEntreBotones;
 
             int xInicial = (PanelInferiorBotonesCentro.Width - anchoTotal) / 2;
             int y = (PanelInferiorBotonesCentro.Height - btnIngresar.Height) / 2;
@@ -36,6 +29,9 @@ namespace ProyectoADS_ROJEX
 
             btnCancelar.Left = btnIngresar.Right + espacioEntreBotones;
             btnCancelar.Top = y;
+
+            btnNuevoUsuario.Left = btnCancelar.Right + espacioEntreBotones;
+            btnNuevoUsuario.Top = y;
         }
 
         private bool valido()
@@ -94,6 +90,20 @@ namespace ProyectoADS_ROJEX
                 InicioView inicioView = new InicioView();
                 inicioView.Show();
             }
+
+        }
+
+        //el boton va a abrir el NuevoUsuarioUC, que está en la carpeta de UserControls, y ese UserControl
+        //va a tener un formulario para registrar un nuevo usuario,
+        //con sus respectivos campos, y un botón para guardar el nuevo usuario en la base de datos
+        private void btnNuevoUsuario_Click(object sender, EventArgs e)
+        {
+            NuevoUsuarioAgregarUC nuevoUsuarioAgregarUC = new NuevoUsuarioAgregarUC();
+            nuevoUsuarioAgregarUC.Show();
+            this.Controls.Add(nuevoUsuarioAgregarUC);
+            nuevoUsuarioAgregarUC.BringToFront();
+            nuevoUsuarioAgregarUC.Location = new Point((this.Width - nuevoUsuarioAgregarUC.Width) / 2
+                                                   , (this.Height - nuevoUsuarioAgregarUC.Height) / 2);
 
         }
     }
