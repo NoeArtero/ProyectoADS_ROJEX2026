@@ -49,28 +49,28 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             tableLayoutPanel1 = new TableLayoutPanel();
             dgvResumen = new Guna.UI2.WinForms.Guna2DataGridView();
             IdOrden = new DataGridViewTextBoxColumn();
@@ -88,8 +88,20 @@
             imgPerfil = new Guna.UI2.WinForms.Guna2PictureBox();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             CardDatosUsuario = new Guna.UI2.WinForms.Guna2GradientPanel();
+            btnCambiarUsContra = new Guna.UI2.WinForms.Guna2GradientButton();
+            guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            txtNombreIngreso = new Guna.UI2.WinForms.Guna2TextBox();
             lblDatosUsuario = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            btnCambiarCorreoTelefonoDireccion = new Guna.UI2.WinForms.Guna2GradientButton();
+            guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtPerfilDireccion = new Guna.UI2.WinForms.Guna2TextBox();
+            guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtPerfilTelefono = new Guna.UI2.WinForms.Guna2TextBox();
+            guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtPerfilCorreo = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
@@ -98,19 +110,6 @@
             kpiGrid = new TableLayoutPanel();
             panelHeader = new Guna.UI2.WinForms.Guna2Panel();
             panelBody = new Guna.UI2.WinForms.Guna2Panel();
-            guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
-            txtNombreIngreso = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            btnCambiarUsContra = new Guna.UI2.WinForms.Guna2GradientButton();
-            guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            txtPerfilCorreo = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            txtPerfilTelefono = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            txtPerfilDireccion = new Guna.UI2.WinForms.Guna2TextBox();
-            btnCambiarCorreoTelefonoDireccion = new Guna.UI2.WinForms.Guna2GradientButton();
             tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvResumen).BeginInit();
             guna2Panel1.SuspendLayout();
@@ -429,6 +428,108 @@
             CardDatosUsuario.Size = new Size(417, 284);
             CardDatosUsuario.TabIndex = 1;
             // 
+            // btnCambiarUsContra
+            // 
+            btnCambiarUsContra.BorderColor = SystemColors.GrayText;
+            btnCambiarUsContra.BorderThickness = 1;
+            btnCambiarUsContra.CustomizableEdges = customizableEdges17;
+            btnCambiarUsContra.DisabledState.BorderColor = Color.DarkGray;
+            btnCambiarUsContra.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnCambiarUsContra.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnCambiarUsContra.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+            btnCambiarUsContra.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnCambiarUsContra.FillColor = Color.FromArgb(29, 32, 69);
+            btnCambiarUsContra.FillColor2 = Color.FromArgb(29, 32, 69);
+            btnCambiarUsContra.FocusedColor = Color.Black;
+            btnCambiarUsContra.Font = new Font("Bahnschrift SemiCondensed", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCambiarUsContra.ForeColor = Color.WhiteSmoke;
+            btnCambiarUsContra.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            btnCambiarUsContra.HoverState.BorderColor = Color.White;
+            btnCambiarUsContra.HoverState.FillColor = Color.FromArgb(60, 71, 136);
+            btnCambiarUsContra.HoverState.FillColor2 = Color.FromArgb(60, 71, 136);
+            btnCambiarUsContra.ImageAlign = HorizontalAlignment.Left;
+            btnCambiarUsContra.ImageSize = new Size(25, 25);
+            btnCambiarUsContra.Location = new Point(110, 210);
+            btnCambiarUsContra.Margin = new Padding(63, 73, 63, 73);
+            btnCambiarUsContra.Name = "btnCambiarUsContra";
+            btnCambiarUsContra.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            btnCambiarUsContra.Size = new Size(202, 53);
+            btnCambiarUsContra.TabIndex = 23;
+            btnCambiarUsContra.Text = "Cambiar";
+            // 
+            // guna2HtmlLabel5
+            // 
+            guna2HtmlLabel5.BackColor = Color.Transparent;
+            guna2HtmlLabel5.Font = new Font("Bahnschrift", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel5.ForeColor = Color.Gainsboro;
+            guna2HtmlLabel5.Location = new Point(0, 130);
+            guna2HtmlLabel5.Margin = new Padding(3, 4, 3, 4);
+            guna2HtmlLabel5.Name = "guna2HtmlLabel5";
+            guna2HtmlLabel5.Size = new Size(166, 38);
+            guna2HtmlLabel5.TabIndex = 7;
+            guna2HtmlLabel5.Text = "Contraseña:";
+            guna2HtmlLabel5.TextAlignment = ContentAlignment.MiddleCenter;
+            // 
+            // guna2HtmlLabel1
+            // 
+            guna2HtmlLabel1.BackColor = Color.Transparent;
+            guna2HtmlLabel1.Font = new Font("Bahnschrift", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel1.ForeColor = Color.Gainsboro;
+            guna2HtmlLabel1.Location = new Point(3, 84);
+            guna2HtmlLabel1.Margin = new Padding(3, 4, 3, 4);
+            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            guna2HtmlLabel1.Size = new Size(116, 38);
+            guna2HtmlLabel1.TabIndex = 6;
+            guna2HtmlLabel1.Text = "Usuario:";
+            guna2HtmlLabel1.TextAlignment = ContentAlignment.MiddleCenter;
+            // 
+            // guna2TextBox1
+            // 
+            guna2TextBox1.BorderRadius = 5;
+            guna2TextBox1.CustomizableEdges = customizableEdges19;
+            guna2TextBox1.DefaultText = "";
+            guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2TextBox1.Font = new Font("Bahnschrift SemiCondensed", 15.8000011F);
+            guna2TextBox1.ForeColor = Color.Black;
+            guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2TextBox1.Location = new Point(173, 139);
+            guna2TextBox1.Margin = new Padding(4, 6, 4, 6);
+            guna2TextBox1.Name = "guna2TextBox1";
+            guna2TextBox1.Padding = new Padding(0, 0, 100, 0);
+            guna2TextBox1.PasswordChar = '*';
+            guna2TextBox1.PlaceholderText = "********";
+            guna2TextBox1.SelectedText = "";
+            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            guna2TextBox1.Size = new Size(240, 29);
+            guna2TextBox1.TabIndex = 5;
+            // 
+            // txtNombreIngreso
+            // 
+            txtNombreIngreso.BorderRadius = 5;
+            txtNombreIngreso.CustomizableEdges = customizableEdges21;
+            txtNombreIngreso.DefaultText = "";
+            txtNombreIngreso.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtNombreIngreso.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtNombreIngreso.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtNombreIngreso.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtNombreIngreso.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtNombreIngreso.Font = new Font("Bahnschrift SemiCondensed", 15.8000011F);
+            txtNombreIngreso.ForeColor = Color.Black;
+            txtNombreIngreso.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtNombreIngreso.Location = new Point(173, 89);
+            txtNombreIngreso.Margin = new Padding(4, 6, 4, 6);
+            txtNombreIngreso.Name = "txtNombreIngreso";
+            txtNombreIngreso.Padding = new Padding(0, 0, 100, 0);
+            txtNombreIngreso.PlaceholderText = "";
+            txtNombreIngreso.SelectedText = "";
+            txtNombreIngreso.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            txtNombreIngreso.Size = new Size(240, 29);
+            txtNombreIngreso.TabIndex = 4;
+            // 
             // lblDatosUsuario
             // 
             lblDatosUsuario.BackColor = Color.Transparent;
@@ -463,6 +564,143 @@
             guna2GradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges34;
             guna2GradientPanel1.Size = new Size(428, 284);
             guna2GradientPanel1.TabIndex = 3;
+            // 
+            // btnCambiarCorreoTelefonoDireccion
+            // 
+            btnCambiarCorreoTelefonoDireccion.BorderColor = SystemColors.GrayText;
+            btnCambiarCorreoTelefonoDireccion.BorderThickness = 1;
+            btnCambiarCorreoTelefonoDireccion.CustomizableEdges = customizableEdges25;
+            btnCambiarCorreoTelefonoDireccion.DisabledState.BorderColor = Color.DarkGray;
+            btnCambiarCorreoTelefonoDireccion.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnCambiarCorreoTelefonoDireccion.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnCambiarCorreoTelefonoDireccion.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+            btnCambiarCorreoTelefonoDireccion.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnCambiarCorreoTelefonoDireccion.FillColor = Color.FromArgb(29, 32, 69);
+            btnCambiarCorreoTelefonoDireccion.FillColor2 = Color.FromArgb(29, 32, 69);
+            btnCambiarCorreoTelefonoDireccion.FocusedColor = Color.Black;
+            btnCambiarCorreoTelefonoDireccion.Font = new Font("Bahnschrift SemiCondensed", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCambiarCorreoTelefonoDireccion.ForeColor = Color.WhiteSmoke;
+            btnCambiarCorreoTelefonoDireccion.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            btnCambiarCorreoTelefonoDireccion.HoverState.BorderColor = Color.White;
+            btnCambiarCorreoTelefonoDireccion.HoverState.FillColor = Color.FromArgb(60, 71, 136);
+            btnCambiarCorreoTelefonoDireccion.HoverState.FillColor2 = Color.FromArgb(60, 71, 136);
+            btnCambiarCorreoTelefonoDireccion.ImageAlign = HorizontalAlignment.Left;
+            btnCambiarCorreoTelefonoDireccion.ImageSize = new Size(25, 25);
+            btnCambiarCorreoTelefonoDireccion.Location = new Point(112, 210);
+            btnCambiarCorreoTelefonoDireccion.Margin = new Padding(63, 73, 63, 73);
+            btnCambiarCorreoTelefonoDireccion.Name = "btnCambiarCorreoTelefonoDireccion";
+            btnCambiarCorreoTelefonoDireccion.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            btnCambiarCorreoTelefonoDireccion.Size = new Size(202, 53);
+            btnCambiarCorreoTelefonoDireccion.TabIndex = 24;
+            btnCambiarCorreoTelefonoDireccion.Text = "Cambiar";
+            // 
+            // guna2HtmlLabel8
+            // 
+            guna2HtmlLabel8.BackColor = Color.Transparent;
+            guna2HtmlLabel8.Font = new Font("Bahnschrift", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel8.ForeColor = Color.Gainsboro;
+            guna2HtmlLabel8.Location = new Point(17, 160);
+            guna2HtmlLabel8.Margin = new Padding(3, 4, 3, 4);
+            guna2HtmlLabel8.Name = "guna2HtmlLabel8";
+            guna2HtmlLabel8.Size = new Size(138, 38);
+            guna2HtmlLabel8.TabIndex = 12;
+            guna2HtmlLabel8.Text = "Dirección:";
+            guna2HtmlLabel8.TextAlignment = ContentAlignment.MiddleCenter;
+            // 
+            // txtPerfilDireccion
+            // 
+            txtPerfilDireccion.BorderRadius = 5;
+            txtPerfilDireccion.CustomizableEdges = customizableEdges27;
+            txtPerfilDireccion.DefaultText = "";
+            txtPerfilDireccion.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtPerfilDireccion.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtPerfilDireccion.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtPerfilDireccion.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtPerfilDireccion.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtPerfilDireccion.Font = new Font("Bahnschrift SemiCondensed", 15.8000011F);
+            txtPerfilDireccion.ForeColor = Color.Black;
+            txtPerfilDireccion.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtPerfilDireccion.Location = new Point(184, 169);
+            txtPerfilDireccion.Margin = new Padding(4, 6, 4, 6);
+            txtPerfilDireccion.Name = "txtPerfilDireccion";
+            txtPerfilDireccion.Padding = new Padding(0, 0, 100, 0);
+            txtPerfilDireccion.PlaceholderText = "";
+            txtPerfilDireccion.SelectedText = "";
+            txtPerfilDireccion.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            txtPerfilDireccion.Size = new Size(240, 29);
+            txtPerfilDireccion.TabIndex = 11;
+            // 
+            // guna2HtmlLabel7
+            // 
+            guna2HtmlLabel7.BackColor = Color.Transparent;
+            guna2HtmlLabel7.Font = new Font("Bahnschrift", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel7.ForeColor = Color.Gainsboro;
+            guna2HtmlLabel7.Location = new Point(17, 121);
+            guna2HtmlLabel7.Margin = new Padding(3, 4, 3, 4);
+            guna2HtmlLabel7.Name = "guna2HtmlLabel7";
+            guna2HtmlLabel7.Size = new Size(124, 38);
+            guna2HtmlLabel7.TabIndex = 10;
+            guna2HtmlLabel7.Text = "Telefono:";
+            guna2HtmlLabel7.TextAlignment = ContentAlignment.MiddleCenter;
+            // 
+            // txtPerfilTelefono
+            // 
+            txtPerfilTelefono.BorderRadius = 5;
+            txtPerfilTelefono.CustomizableEdges = customizableEdges29;
+            txtPerfilTelefono.DefaultText = "";
+            txtPerfilTelefono.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtPerfilTelefono.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtPerfilTelefono.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtPerfilTelefono.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtPerfilTelefono.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtPerfilTelefono.Font = new Font("Bahnschrift SemiCondensed", 15.8000011F);
+            txtPerfilTelefono.ForeColor = Color.Black;
+            txtPerfilTelefono.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtPerfilTelefono.Location = new Point(184, 130);
+            txtPerfilTelefono.Margin = new Padding(4, 6, 4, 6);
+            txtPerfilTelefono.Name = "txtPerfilTelefono";
+            txtPerfilTelefono.Padding = new Padding(0, 0, 100, 0);
+            txtPerfilTelefono.PlaceholderText = "";
+            txtPerfilTelefono.SelectedText = "";
+            txtPerfilTelefono.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            txtPerfilTelefono.Size = new Size(240, 29);
+            txtPerfilTelefono.TabIndex = 9;
+            // 
+            // guna2HtmlLabel6
+            // 
+            guna2HtmlLabel6.BackColor = Color.Transparent;
+            guna2HtmlLabel6.Font = new Font("Bahnschrift", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel6.ForeColor = Color.Gainsboro;
+            guna2HtmlLabel6.Location = new Point(17, 80);
+            guna2HtmlLabel6.Margin = new Padding(3, 4, 3, 4);
+            guna2HtmlLabel6.Name = "guna2HtmlLabel6";
+            guna2HtmlLabel6.Size = new Size(103, 38);
+            guna2HtmlLabel6.TabIndex = 8;
+            guna2HtmlLabel6.Text = "Correo:";
+            guna2HtmlLabel6.TextAlignment = ContentAlignment.MiddleCenter;
+            // 
+            // txtPerfilCorreo
+            // 
+            txtPerfilCorreo.BorderRadius = 5;
+            txtPerfilCorreo.CustomizableEdges = customizableEdges31;
+            txtPerfilCorreo.DefaultText = "";
+            txtPerfilCorreo.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtPerfilCorreo.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtPerfilCorreo.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtPerfilCorreo.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtPerfilCorreo.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtPerfilCorreo.Font = new Font("Bahnschrift SemiCondensed", 15.8000011F);
+            txtPerfilCorreo.ForeColor = Color.Black;
+            txtPerfilCorreo.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtPerfilCorreo.Location = new Point(184, 89);
+            txtPerfilCorreo.Margin = new Padding(4, 6, 4, 6);
+            txtPerfilCorreo.Name = "txtPerfilCorreo";
+            txtPerfilCorreo.Padding = new Padding(0, 0, 100, 0);
+            txtPerfilCorreo.PlaceholderText = "";
+            txtPerfilCorreo.SelectedText = "";
+            txtPerfilCorreo.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            txtPerfilCorreo.Size = new Size(240, 29);
+            txtPerfilCorreo.TabIndex = 7;
             // 
             // guna2HtmlLabel3
             // 
@@ -589,260 +827,6 @@
             panelBody.Size = new Size(1355, 895);
             panelBody.TabIndex = 3;
             // 
-            // guna2ContextMenuStrip1
-            // 
-            guna2ContextMenuStrip1.ImageScalingSize = new Size(20, 20);
-            guna2ContextMenuStrip1.Name = "guna2ContextMenuStrip1";
-            guna2ContextMenuStrip1.RenderStyle.ArrowColor = Color.FromArgb(151, 143, 255);
-            guna2ContextMenuStrip1.RenderStyle.BorderColor = Color.Gainsboro;
-            guna2ContextMenuStrip1.RenderStyle.ColorTable = null;
-            guna2ContextMenuStrip1.RenderStyle.RoundedEdges = true;
-            guna2ContextMenuStrip1.RenderStyle.SelectionArrowColor = Color.White;
-            guna2ContextMenuStrip1.RenderStyle.SelectionBackColor = Color.FromArgb(100, 88, 255);
-            guna2ContextMenuStrip1.RenderStyle.SelectionForeColor = Color.White;
-            guna2ContextMenuStrip1.RenderStyle.SeparatorColor = Color.Gainsboro;
-            guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            guna2ContextMenuStrip1.Size = new Size(61, 4);
-            // 
-            // txtNombreIngreso
-            // 
-            txtNombreIngreso.BorderRadius = 5;
-            txtNombreIngreso.CustomizableEdges = customizableEdges21;
-            txtNombreIngreso.DefaultText = "";
-            txtNombreIngreso.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtNombreIngreso.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtNombreIngreso.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtNombreIngreso.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtNombreIngreso.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtNombreIngreso.Font = new Font("Bahnschrift SemiCondensed", 15.8000011F);
-            txtNombreIngreso.ForeColor = Color.Black;
-            txtNombreIngreso.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtNombreIngreso.Location = new Point(173, 89);
-            txtNombreIngreso.Margin = new Padding(4, 6, 4, 6);
-            txtNombreIngreso.Name = "txtNombreIngreso";
-            txtNombreIngreso.Padding = new Padding(0, 0, 100, 0);
-            txtNombreIngreso.PlaceholderText = "";
-            txtNombreIngreso.SelectedText = "";
-            txtNombreIngreso.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            txtNombreIngreso.Size = new Size(240, 29);
-            txtNombreIngreso.TabIndex = 4;
-            // 
-            // guna2TextBox1
-            // 
-            guna2TextBox1.BorderRadius = 5;
-            guna2TextBox1.CustomizableEdges = customizableEdges19;
-            guna2TextBox1.DefaultText = "";
-            guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Font = new Font("Bahnschrift SemiCondensed", 15.8000011F);
-            guna2TextBox1.ForeColor = Color.Black;
-            guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(173, 139);
-            guna2TextBox1.Margin = new Padding(4, 6, 4, 6);
-            guna2TextBox1.Name = "guna2TextBox1";
-            guna2TextBox1.Padding = new Padding(0, 0, 100, 0);
-            guna2TextBox1.PasswordChar = '*';
-            guna2TextBox1.PlaceholderText = "********";
-            guna2TextBox1.SelectedText = "";
-            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            guna2TextBox1.Size = new Size(240, 29);
-            guna2TextBox1.TabIndex = 5;
-            // 
-            // guna2HtmlLabel1
-            // 
-            guna2HtmlLabel1.BackColor = Color.Transparent;
-            guna2HtmlLabel1.Font = new Font("Bahnschrift", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel1.ForeColor = Color.Gainsboro;
-            guna2HtmlLabel1.Location = new Point(3, 84);
-            guna2HtmlLabel1.Margin = new Padding(3, 4, 3, 4);
-            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(116, 38);
-            guna2HtmlLabel1.TabIndex = 6;
-            guna2HtmlLabel1.Text = "Usuario:";
-            guna2HtmlLabel1.TextAlignment = ContentAlignment.MiddleCenter;
-            // 
-            // guna2HtmlLabel5
-            // 
-            guna2HtmlLabel5.BackColor = Color.Transparent;
-            guna2HtmlLabel5.Font = new Font("Bahnschrift", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel5.ForeColor = Color.Gainsboro;
-            guna2HtmlLabel5.Location = new Point(0, 130);
-            guna2HtmlLabel5.Margin = new Padding(3, 4, 3, 4);
-            guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            guna2HtmlLabel5.Size = new Size(166, 38);
-            guna2HtmlLabel5.TabIndex = 7;
-            guna2HtmlLabel5.Text = "Contraseña:";
-            guna2HtmlLabel5.TextAlignment = ContentAlignment.MiddleCenter;
-            // 
-            // btnCambiarUsContra
-            // 
-            btnCambiarUsContra.BorderColor = SystemColors.GrayText;
-            btnCambiarUsContra.BorderThickness = 1;
-            btnCambiarUsContra.CustomizableEdges = customizableEdges17;
-            btnCambiarUsContra.DisabledState.BorderColor = Color.DarkGray;
-            btnCambiarUsContra.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnCambiarUsContra.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnCambiarUsContra.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
-            btnCambiarUsContra.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnCambiarUsContra.FillColor = Color.FromArgb(29, 32, 69);
-            btnCambiarUsContra.FillColor2 = Color.FromArgb(29, 32, 69);
-            btnCambiarUsContra.FocusedColor = Color.Black;
-            btnCambiarUsContra.Font = new Font("Bahnschrift SemiCondensed", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnCambiarUsContra.ForeColor = Color.WhiteSmoke;
-            btnCambiarUsContra.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            btnCambiarUsContra.HoverState.BorderColor = Color.White;
-            btnCambiarUsContra.HoverState.FillColor = Color.FromArgb(60, 71, 136);
-            btnCambiarUsContra.HoverState.FillColor2 = Color.FromArgb(60, 71, 136);
-            btnCambiarUsContra.ImageAlign = HorizontalAlignment.Left;
-            btnCambiarUsContra.ImageSize = new Size(25, 25);
-            btnCambiarUsContra.Location = new Point(110, 210);
-            btnCambiarUsContra.Margin = new Padding(63, 73, 63, 73);
-            btnCambiarUsContra.Name = "btnCambiarUsContra";
-            btnCambiarUsContra.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            btnCambiarUsContra.Size = new Size(202, 53);
-            btnCambiarUsContra.TabIndex = 23;
-            btnCambiarUsContra.Text = "Cambiar";
-            // 
-            // guna2HtmlLabel6
-            // 
-            guna2HtmlLabel6.BackColor = Color.Transparent;
-            guna2HtmlLabel6.Font = new Font("Bahnschrift", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel6.ForeColor = Color.Gainsboro;
-            guna2HtmlLabel6.Location = new Point(17, 80);
-            guna2HtmlLabel6.Margin = new Padding(3, 4, 3, 4);
-            guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            guna2HtmlLabel6.Size = new Size(103, 38);
-            guna2HtmlLabel6.TabIndex = 8;
-            guna2HtmlLabel6.Text = "Correo:";
-            guna2HtmlLabel6.TextAlignment = ContentAlignment.MiddleCenter;
-            // 
-            // txtPerfilCorreo
-            // 
-            txtPerfilCorreo.BorderRadius = 5;
-            txtPerfilCorreo.CustomizableEdges = customizableEdges31;
-            txtPerfilCorreo.DefaultText = "";
-            txtPerfilCorreo.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtPerfilCorreo.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtPerfilCorreo.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtPerfilCorreo.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtPerfilCorreo.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtPerfilCorreo.Font = new Font("Bahnschrift SemiCondensed", 15.8000011F);
-            txtPerfilCorreo.ForeColor = Color.Black;
-            txtPerfilCorreo.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtPerfilCorreo.Location = new Point(184, 89);
-            txtPerfilCorreo.Margin = new Padding(4, 6, 4, 6);
-            txtPerfilCorreo.Name = "txtPerfilCorreo";
-            txtPerfilCorreo.Padding = new Padding(0, 0, 100, 0);
-            txtPerfilCorreo.PlaceholderText = "";
-            txtPerfilCorreo.SelectedText = "";
-            txtPerfilCorreo.ShadowDecoration.CustomizableEdges = customizableEdges32;
-            txtPerfilCorreo.Size = new Size(240, 29);
-            txtPerfilCorreo.TabIndex = 7;
-            // 
-            // guna2HtmlLabel7
-            // 
-            guna2HtmlLabel7.BackColor = Color.Transparent;
-            guna2HtmlLabel7.Font = new Font("Bahnschrift", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel7.ForeColor = Color.Gainsboro;
-            guna2HtmlLabel7.Location = new Point(17, 121);
-            guna2HtmlLabel7.Margin = new Padding(3, 4, 3, 4);
-            guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            guna2HtmlLabel7.Size = new Size(124, 38);
-            guna2HtmlLabel7.TabIndex = 10;
-            guna2HtmlLabel7.Text = "Telefono:";
-            guna2HtmlLabel7.TextAlignment = ContentAlignment.MiddleCenter;
-            // 
-            // txtPerfilTelefono
-            // 
-            txtPerfilTelefono.BorderRadius = 5;
-            txtPerfilTelefono.CustomizableEdges = customizableEdges29;
-            txtPerfilTelefono.DefaultText = "";
-            txtPerfilTelefono.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtPerfilTelefono.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtPerfilTelefono.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtPerfilTelefono.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtPerfilTelefono.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtPerfilTelefono.Font = new Font("Bahnschrift SemiCondensed", 15.8000011F);
-            txtPerfilTelefono.ForeColor = Color.Black;
-            txtPerfilTelefono.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtPerfilTelefono.Location = new Point(184, 130);
-            txtPerfilTelefono.Margin = new Padding(4, 6, 4, 6);
-            txtPerfilTelefono.Name = "txtPerfilTelefono";
-            txtPerfilTelefono.Padding = new Padding(0, 0, 100, 0);
-            txtPerfilTelefono.PlaceholderText = "";
-            txtPerfilTelefono.SelectedText = "";
-            txtPerfilTelefono.ShadowDecoration.CustomizableEdges = customizableEdges30;
-            txtPerfilTelefono.Size = new Size(240, 29);
-            txtPerfilTelefono.TabIndex = 9;
-            // 
-            // guna2HtmlLabel8
-            // 
-            guna2HtmlLabel8.BackColor = Color.Transparent;
-            guna2HtmlLabel8.Font = new Font("Bahnschrift", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel8.ForeColor = Color.Gainsboro;
-            guna2HtmlLabel8.Location = new Point(17, 160);
-            guna2HtmlLabel8.Margin = new Padding(3, 4, 3, 4);
-            guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-            guna2HtmlLabel8.Size = new Size(138, 38);
-            guna2HtmlLabel8.TabIndex = 12;
-            guna2HtmlLabel8.Text = "Dirección:";
-            guna2HtmlLabel8.TextAlignment = ContentAlignment.MiddleCenter;
-            // 
-            // txtPerfilDireccion
-            // 
-            txtPerfilDireccion.BorderRadius = 5;
-            txtPerfilDireccion.CustomizableEdges = customizableEdges27;
-            txtPerfilDireccion.DefaultText = "";
-            txtPerfilDireccion.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtPerfilDireccion.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtPerfilDireccion.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtPerfilDireccion.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtPerfilDireccion.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtPerfilDireccion.Font = new Font("Bahnschrift SemiCondensed", 15.8000011F);
-            txtPerfilDireccion.ForeColor = Color.Black;
-            txtPerfilDireccion.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtPerfilDireccion.Location = new Point(184, 169);
-            txtPerfilDireccion.Margin = new Padding(4, 6, 4, 6);
-            txtPerfilDireccion.Name = "txtPerfilDireccion";
-            txtPerfilDireccion.Padding = new Padding(0, 0, 100, 0);
-            txtPerfilDireccion.PlaceholderText = "";
-            txtPerfilDireccion.SelectedText = "";
-            txtPerfilDireccion.ShadowDecoration.CustomizableEdges = customizableEdges28;
-            txtPerfilDireccion.Size = new Size(240, 29);
-            txtPerfilDireccion.TabIndex = 11;
-            // 
-            // btnCambiarCorreoTelefonoDireccion
-            // 
-            btnCambiarCorreoTelefonoDireccion.BorderColor = SystemColors.GrayText;
-            btnCambiarCorreoTelefonoDireccion.BorderThickness = 1;
-            btnCambiarCorreoTelefonoDireccion.CustomizableEdges = customizableEdges25;
-            btnCambiarCorreoTelefonoDireccion.DisabledState.BorderColor = Color.DarkGray;
-            btnCambiarCorreoTelefonoDireccion.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnCambiarCorreoTelefonoDireccion.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnCambiarCorreoTelefonoDireccion.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
-            btnCambiarCorreoTelefonoDireccion.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnCambiarCorreoTelefonoDireccion.FillColor = Color.FromArgb(29, 32, 69);
-            btnCambiarCorreoTelefonoDireccion.FillColor2 = Color.FromArgb(29, 32, 69);
-            btnCambiarCorreoTelefonoDireccion.FocusedColor = Color.Black;
-            btnCambiarCorreoTelefonoDireccion.Font = new Font("Bahnschrift SemiCondensed", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnCambiarCorreoTelefonoDireccion.ForeColor = Color.WhiteSmoke;
-            btnCambiarCorreoTelefonoDireccion.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            btnCambiarCorreoTelefonoDireccion.HoverState.BorderColor = Color.White;
-            btnCambiarCorreoTelefonoDireccion.HoverState.FillColor = Color.FromArgb(60, 71, 136);
-            btnCambiarCorreoTelefonoDireccion.HoverState.FillColor2 = Color.FromArgb(60, 71, 136);
-            btnCambiarCorreoTelefonoDireccion.ImageAlign = HorizontalAlignment.Left;
-            btnCambiarCorreoTelefonoDireccion.ImageSize = new Size(25, 25);
-            btnCambiarCorreoTelefonoDireccion.Location = new Point(112, 210);
-            btnCambiarCorreoTelefonoDireccion.Margin = new Padding(63, 73, 63, 73);
-            btnCambiarCorreoTelefonoDireccion.Name = "btnCambiarCorreoTelefonoDireccion";
-            btnCambiarCorreoTelefonoDireccion.ShadowDecoration.CustomizableEdges = customizableEdges26;
-            btnCambiarCorreoTelefonoDireccion.Size = new Size(202, 53);
-            btnCambiarCorreoTelefonoDireccion.TabIndex = 24;
-            btnCambiarCorreoTelefonoDireccion.Text = "Cambiar";
-            // 
             // UsuarioPerfil
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -906,7 +890,6 @@
         private Guna.UI2.WinForms.Guna2GradientButton btnEliminarFoto;
         private Guna.UI2.WinForms.Guna2GradientButton btnCambiarFoto;
         private Guna.UI2.WinForms.Guna2Button btnGuardarCambios;
-        private Guna.UI2.WinForms.Guna2ContextMenuStrip guna2ContextMenuStrip1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2TextBox txtNombreIngreso;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;

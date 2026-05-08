@@ -25,10 +25,9 @@ namespace HerramientasTotal.Views.Productos
             cmbCategoriaProductoMovimientos.DataSource = new List<string>
             {
 
-               "Herramientas Manuales",
-                "Herramientas Eléctricas",
-                "Accesorios",
-                "Equipos de Seguridad",
+               "Deportivos",
+               "Lujo",
+               "Casuales",
                 "Todas"
             };
             cmbCategoriaProductoMovimientos.SelectedIndex = 4;
