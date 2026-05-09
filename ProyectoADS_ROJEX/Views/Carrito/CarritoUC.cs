@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿
 using Bogus;
+using ProyectoADS_ROJEX.Views.Carrito;
+using ProyectoADS_ROJEX.Views.NuevoUsuario;
 
 
 
@@ -16,18 +10,10 @@ using Bogus;
 namespace HerramientasTotal.Views.Productos
 {
 
-    public class ProductoCarritoTemp
-    {
-        public Image Fotografia { get; set; }
-        public string Codigo { get; set; }
-        public string Nombre { get; set; }
-        public string Categoria { get; set; }
-        public decimal Costo { get; set; }
-    }
     public partial class CarritoUC : UserControl
     {
         //conector con la clase ProductoRow
-        
+
         public CarritoUC()
         {
             InitializeComponent();
@@ -49,7 +35,7 @@ namespace HerramientasTotal.Views.Productos
             cmbCategoriaProducto.SelectedIndex = 4;
 
 
-           
+
 
             // FIN DATOS PROVICIONALES PARA LOS COMBOBOX
         }
@@ -97,10 +83,29 @@ namespace HerramientasTotal.Views.Productos
             dgvProductos.DataSource = listaProductos;
         }
 
+        private void btnAgregarProducto_Click(object sender, EventArgs e)
+        {
+            PagarTarjetaUC pagarTarjetaUC = new PagarTarjetaUC();
+            pagarTarjetaUC.Show();
+            this.Controls.Add(pagarTarjetaUC);
+            pagarTarjetaUC.BringToFront();
+            pagarTarjetaUC.Location = new Point((this.Width - pagarTarjetaUC.Width) / 2
+                                                   , (this.Height - pagarTarjetaUC.Height) / 2);
+        }
+
 
 
         // fin valores provisionales para la tabla usando Bogus
 
-        
+
+    }
+
+    public class ProductoCarritoTemp
+    {
+        public Image Fotografia { get; set; }
+        public string Codigo { get; set; }
+        public string Nombre { get; set; }
+        public string Categoria { get; set; }
+        public decimal Costo { get; set; }
     }
 }

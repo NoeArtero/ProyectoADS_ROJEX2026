@@ -30,7 +30,7 @@ namespace HerramientasTotal.Views.Productos
                "Casuales",
                 "Todas"
             };
-            cmbCategoriaProductoMovimientos.SelectedIndex = 4;
+            cmbCategoriaProductoMovimientos.SelectedIndex = 3;
 
         }
 
