@@ -1,4 +1,7 @@
-﻿using System.Data.SqlClient;
+﻿using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Linq;
 
 namespace ProyectoADS_ROJEX.ConexionDB
 {
@@ -31,13 +34,15 @@ namespace ProyectoADS_ROJEX.ConexionDB
         {
             var list = new List<string>
             {
-                @"(localdb)\MSSQLLocalDB",
+                // 1. LOS SERVIDORES REALES PRIMERO (Donde sí existen las tablas)
                 @".\SQLEXPRESS",
-                $@"{Environment.MachineName}\SQLEXPRESS",
-                @"localhost\SQLEXPRESS",
-                "localhost",
                 ".",
-                Environment.MachineName
+                "localhost",
+                $@"{Environment.MachineName}\SQLEXPRESS",
+                Environment.MachineName,
+                
+                // 2. EL LOCALDB AL FINAL (Para que no cree bases de datos falsas)
+                @"(localdb)\MSSQLLocalDB"
             };
 
             return list.Where(s => !string.IsNullOrWhiteSpace(s))

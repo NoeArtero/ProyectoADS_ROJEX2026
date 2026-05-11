@@ -123,14 +123,13 @@
             panelHeader.Dock = DockStyle.Top;
             panelHeader.FillColor = Color.FromArgb(28, 30, 68);
             panelHeader.Location = new Point(0, 0);
-            panelHeader.Margin = new Padding(3, 4, 3, 4);
             panelHeader.Name = "panelHeader";
-            panelHeader.Padding = new Padding(18, 16, 18, 16);
+            panelHeader.Padding = new Padding(16, 12, 16, 12);
             panelHeader.ShadowDecoration.BorderRadius = 5;
             panelHeader.ShadowDecoration.Color = Color.FromArgb(29, 27, 52);
             panelHeader.ShadowDecoration.CustomizableEdges = customizableEdges38;
             panelHeader.ShadowDecoration.Depth = 5;
-            panelHeader.Size = new Size(1350, 93);
+            panelHeader.Size = new Size(1181, 70);
             panelHeader.TabIndex = 1;
             // 
             // panelCentro
@@ -139,10 +138,11 @@
             panelCentro.Controls.Add(lblTitulo);
             panelCentro.CustomizableEdges = customizableEdges31;
             panelCentro.Dock = DockStyle.Fill;
-            panelCentro.Location = new Point(335, 16);
+            panelCentro.Location = new Point(293, 12);
+            panelCentro.Margin = new Padding(3, 2, 3, 2);
             panelCentro.Name = "panelCentro";
             panelCentro.ShadowDecoration.CustomizableEdges = customizableEdges32;
-            panelCentro.Size = new Size(717, 61);
+            panelCentro.Size = new Size(627, 46);
             panelCentro.TabIndex = 3;
             panelCentro.Resize += panelCentro_Resize;
             // 
@@ -151,10 +151,9 @@
             lblTitulo.BackColor = Color.Transparent;
             lblTitulo.Font = new Font("Bahnschrift SemiCondensed", 30F);
             lblTitulo.ForeColor = Color.Gainsboro;
-            lblTitulo.Location = new Point(170, 4);
-            lblTitulo.Margin = new Padding(3, 4, 3, 4);
+            lblTitulo.Location = new Point(149, 3);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(112, 62);
+            lblTitulo.Size = new Size(90, 50);
             lblTitulo.TabIndex = 0;
             lblTitulo.Text = "Rojex";
             lblTitulo.TextAlignment = ContentAlignment.MiddleCenter;
@@ -164,10 +163,11 @@
             guna2Panel1.BackColor = Color.Transparent;
             guna2Panel1.CustomizableEdges = customizableEdges33;
             guna2Panel1.Dock = DockStyle.Right;
-            guna2Panel1.Location = new Point(1052, 16);
+            guna2Panel1.Location = new Point(920, 12);
+            guna2Panel1.Margin = new Padding(3, 2, 3, 2);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges34;
-            guna2Panel1.Size = new Size(280, 61);
+            guna2Panel1.Size = new Size(245, 46);
             guna2Panel1.TabIndex = 3;
             // 
             // panelDerecha
@@ -176,10 +176,11 @@
             panelDerecha.Controls.Add(lblInicioSesion);
             panelDerecha.CustomizableEdges = customizableEdges35;
             panelDerecha.Dock = DockStyle.Left;
-            panelDerecha.Location = new Point(18, 16);
+            panelDerecha.Location = new Point(16, 12);
+            panelDerecha.Margin = new Padding(3, 2, 3, 2);
             panelDerecha.Name = "panelDerecha";
             panelDerecha.ShadowDecoration.CustomizableEdges = customizableEdges36;
-            panelDerecha.Size = new Size(317, 61);
+            panelDerecha.Size = new Size(277, 46);
             panelDerecha.TabIndex = 2;
             // 
             // lblInicioSesion
@@ -187,10 +188,9 @@
             lblInicioSesion.BackColor = Color.Transparent;
             lblInicioSesion.Font = new Font("Bahnschrift SemiCondensed", 30F);
             lblInicioSesion.ForeColor = Color.Gainsboro;
-            lblInicioSesion.Location = new Point(3, 4);
-            lblInicioSesion.Margin = new Padding(3, 4, 3, 4);
+            lblInicioSesion.Location = new Point(3, 3);
             lblInicioSesion.Name = "lblInicioSesion";
-            lblInicioSesion.Size = new Size(215, 62);
+            lblInicioSesion.Size = new Size(175, 50);
             lblInicioSesion.TabIndex = 1;
             lblInicioSesion.Text = "Bienvenido";
             lblInicioSesion.TextAlignment = ContentAlignment.MiddleCenter;
@@ -203,13 +203,14 @@
             tblCredenciales.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
             tblCredenciales.Controls.Add(PanelCredenciales, 1, 1);
             tblCredenciales.Dock = DockStyle.Fill;
-            tblCredenciales.Location = new Point(0, 93);
+            tblCredenciales.Location = new Point(0, 70);
+            tblCredenciales.Margin = new Padding(3, 2, 3, 2);
             tblCredenciales.Name = "tblCredenciales";
             tblCredenciales.RowCount = 3;
             tblCredenciales.RowStyles.Add(new RowStyle(SizeType.Percent, 30F));
             tblCredenciales.RowStyles.Add(new RowStyle(SizeType.Percent, 40F));
             tblCredenciales.RowStyles.Add(new RowStyle(SizeType.Percent, 30F));
-            tblCredenciales.Size = new Size(1350, 658);
+            tblCredenciales.Size = new Size(1181, 493);
             tblCredenciales.TabIndex = 2;
             // 
             // PanelCredenciales
@@ -218,10 +219,11 @@
             PanelCredenciales.Controls.Add(guna2Panel2);
             PanelCredenciales.CustomizableEdges = customizableEdges29;
             PanelCredenciales.Dock = DockStyle.Fill;
-            PanelCredenciales.Location = new Point(453, 200);
+            PanelCredenciales.Location = new Point(396, 149);
+            PanelCredenciales.Margin = new Padding(3, 2, 3, 2);
             PanelCredenciales.Name = "PanelCredenciales";
             PanelCredenciales.ShadowDecoration.CustomizableEdges = customizableEdges30;
-            PanelCredenciales.Size = new Size(444, 257);
+            PanelCredenciales.Size = new Size(387, 193);
             PanelCredenciales.TabIndex = 0;
             // 
             // PanelCredencialesFinal
@@ -234,10 +236,11 @@
             PanelCredencialesFinal.FillColor = Color.FromArgb(234, 233, 245);
             PanelCredencialesFinal.FillColor2 = Color.FromArgb(236, 234, 247);
             PanelCredencialesFinal.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            PanelCredencialesFinal.Location = new Point(0, 71);
+            PanelCredencialesFinal.Location = new Point(0, 53);
+            PanelCredencialesFinal.Margin = new Padding(3, 2, 3, 2);
             PanelCredencialesFinal.Name = "PanelCredencialesFinal";
             PanelCredencialesFinal.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            PanelCredencialesFinal.Size = new Size(444, 186);
+            PanelCredencialesFinal.Size = new Size(387, 140);
             PanelCredencialesFinal.TabIndex = 1;
             // 
             // tableLayoutPanel1
@@ -251,13 +254,14 @@
             tableLayoutPanel1.Controls.Add(txtContra, 0, 3);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Margin = new Padding(3, 2, 3, 2);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 4;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
-            tableLayoutPanel1.Size = new Size(444, 108);
+            tableLayoutPanel1.Size = new Size(387, 82);
             tableLayoutPanel1.TabIndex = 2;
             // 
             // lblContra
@@ -266,10 +270,9 @@
             lblContra.BackColor = Color.FromArgb(28, 30, 68);
             lblContra.Font = new Font("Bahnschrift SemiCondensed", 15.8000011F);
             lblContra.ForeColor = Color.Gainsboro;
-            lblContra.Location = new Point(3, 58);
-            lblContra.Margin = new Padding(3, 4, 3, 4);
+            lblContra.Location = new Point(3, 43);
             lblContra.Name = "lblContra";
-            lblContra.Size = new Size(124, 33);
+            lblContra.Size = new Size(101, 27);
             lblContra.TabIndex = 5;
             lblContra.Text = "Contraseña:";
             lblContra.TextAlignment = ContentAlignment.MiddleCenter;
@@ -280,10 +283,9 @@
             lblNombreIngreso.BackColor = Color.FromArgb(28, 30, 68);
             lblNombreIngreso.Font = new Font("Bahnschrift SemiCondensed", 15.8000011F);
             lblNombreIngreso.ForeColor = Color.Gainsboro;
-            lblNombreIngreso.Location = new Point(3, 4);
-            lblNombreIngreso.Margin = new Padding(3, 4, 3, 4);
+            lblNombreIngreso.Location = new Point(3, 3);
             lblNombreIngreso.Name = "lblNombreIngreso";
-            lblNombreIngreso.Size = new Size(86, 33);
+            lblNombreIngreso.Size = new Size(70, 27);
             lblNombreIngreso.TabIndex = 2;
             lblNombreIngreso.Text = "Usuario:";
             lblNombreIngreso.TextAlignment = ContentAlignment.MiddleCenter;
@@ -302,14 +304,15 @@
             txtNombreIngreso.Font = new Font("Bahnschrift SemiCondensed", 15.8000011F);
             txtNombreIngreso.ForeColor = Color.Black;
             txtNombreIngreso.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtNombreIngreso.Location = new Point(4, 33);
-            txtNombreIngreso.Margin = new Padding(4, 6, 4, 6);
+            txtNombreIngreso.Location = new Point(4, 24);
+            txtNombreIngreso.Margin = new Padding(4);
+            txtNombreIngreso.MaxLength = 50;
             txtNombreIngreso.Name = "txtNombreIngreso";
-            txtNombreIngreso.Padding = new Padding(0, 0, 100, 0);
+            txtNombreIngreso.Padding = new Padding(0, 0, 88, 0);
             txtNombreIngreso.PlaceholderText = "";
             txtNombreIngreso.SelectedText = "";
             txtNombreIngreso.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            txtNombreIngreso.Size = new Size(436, 15);
+            txtNombreIngreso.Size = new Size(379, 12);
             txtNombreIngreso.TabIndex = 3;
             // 
             // txtContra
@@ -326,15 +329,17 @@
             txtContra.Font = new Font("Bahnschrift SemiCondensed", 15.8000011F);
             txtContra.ForeColor = Color.Black;
             txtContra.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtContra.Location = new Point(4, 87);
-            txtContra.Margin = new Padding(4, 6, 4, 6);
+            txtContra.Location = new Point(4, 64);
+            txtContra.Margin = new Padding(4);
+            txtContra.MaxLength = 10;
             txtContra.Name = "txtContra";
             txtContra.PasswordChar = '*';
             txtContra.PlaceholderText = "";
             txtContra.SelectedText = "";
             txtContra.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            txtContra.Size = new Size(436, 15);
+            txtContra.Size = new Size(379, 14);
             txtContra.TabIndex = 4;
+            txtContra.UseSystemPasswordChar = true;
             // 
             // panelInferriorCredencialesFinal
             // 
@@ -344,10 +349,11 @@
             panelInferriorCredencialesFinal.Controls.Add(panelInferiorBotonesIzquierda);
             panelInferriorCredencialesFinal.CustomizableEdges = customizableEdges17;
             panelInferriorCredencialesFinal.Dock = DockStyle.Bottom;
-            panelInferriorCredencialesFinal.Location = new Point(0, 108);
+            panelInferriorCredencialesFinal.Location = new Point(0, 82);
+            panelInferriorCredencialesFinal.Margin = new Padding(3, 2, 3, 2);
             panelInferriorCredencialesFinal.Name = "panelInferriorCredencialesFinal";
             panelInferriorCredencialesFinal.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            panelInferriorCredencialesFinal.Size = new Size(444, 78);
+            panelInferriorCredencialesFinal.Size = new Size(387, 58);
             panelInferriorCredencialesFinal.TabIndex = 1;
             // 
             // PanelInferiorBotonesCentro
@@ -357,10 +363,11 @@
             PanelInferiorBotonesCentro.Controls.Add(btnIngresar);
             PanelInferiorBotonesCentro.CustomizableEdges = customizableEdges11;
             PanelInferiorBotonesCentro.Dock = DockStyle.Fill;
-            PanelInferiorBotonesCentro.Location = new Point(22, 0);
+            PanelInferiorBotonesCentro.Location = new Point(19, 0);
+            PanelInferiorBotonesCentro.Margin = new Padding(3, 2, 3, 2);
             PanelInferiorBotonesCentro.Name = "PanelInferiorBotonesCentro";
             PanelInferiorBotonesCentro.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            PanelInferiorBotonesCentro.Size = new Size(400, 78);
+            PanelInferiorBotonesCentro.Size = new Size(349, 58);
             PanelInferiorBotonesCentro.TabIndex = 2;
             // 
             // btnNuevoUsuario
@@ -384,11 +391,11 @@
             btnNuevoUsuario.HoverState.FillColor2 = Color.FromArgb(60, 71, 136);
             btnNuevoUsuario.ImageAlign = HorizontalAlignment.Left;
             btnNuevoUsuario.ImageSize = new Size(25, 25);
-            btnNuevoUsuario.Location = new Point(284, 13);
-            btnNuevoUsuario.Margin = new Padding(63, 73, 63, 73);
+            btnNuevoUsuario.Location = new Point(248, 10);
+            btnNuevoUsuario.Margin = new Padding(55);
             btnNuevoUsuario.Name = "btnNuevoUsuario";
             btnNuevoUsuario.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnNuevoUsuario.Size = new Size(101, 53);
+            btnNuevoUsuario.Size = new Size(88, 40);
             btnNuevoUsuario.TabIndex = 24;
             btnNuevoUsuario.Text = "Nuevo usuario";
             btnNuevoUsuario.Click += btnNuevoUsuario_Click;
@@ -414,11 +421,11 @@
             btnCancelar.HoverState.FillColor2 = Color.FromArgb(60, 71, 136);
             btnCancelar.ImageAlign = HorizontalAlignment.Left;
             btnCancelar.ImageSize = new Size(25, 25);
-            btnCancelar.Location = new Point(143, 13);
-            btnCancelar.Margin = new Padding(63, 73, 63, 73);
+            btnCancelar.Location = new Point(125, 10);
+            btnCancelar.Margin = new Padding(55);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnCancelar.Size = new Size(101, 53);
+            btnCancelar.Size = new Size(88, 40);
             btnCancelar.TabIndex = 23;
             btnCancelar.Text = "Cancelar";
             btnCancelar.Click += btnCancelar_Click;
@@ -444,11 +451,11 @@
             btnIngresar.HoverState.FillColor2 = Color.FromArgb(60, 71, 136);
             btnIngresar.ImageAlign = HorizontalAlignment.Left;
             btnIngresar.ImageSize = new Size(25, 25);
-            btnIngresar.Location = new Point(6, 13);
-            btnIngresar.Margin = new Padding(63, 73, 63, 73);
+            btnIngresar.Location = new Point(5, 10);
+            btnIngresar.Margin = new Padding(55);
             btnIngresar.Name = "btnIngresar";
             btnIngresar.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            btnIngresar.Size = new Size(101, 53);
+            btnIngresar.Size = new Size(88, 40);
             btnIngresar.TabIndex = 22;
             btnIngresar.Text = "Ingresar";
             btnIngresar.Click += btnIngresar_Click;
@@ -457,10 +464,11 @@
             // 
             panelInferiorBotonesDerecha.CustomizableEdges = customizableEdges13;
             panelInferiorBotonesDerecha.Dock = DockStyle.Right;
-            panelInferiorBotonesDerecha.Location = new Point(422, 0);
+            panelInferiorBotonesDerecha.Location = new Point(368, 0);
+            panelInferiorBotonesDerecha.Margin = new Padding(3, 2, 3, 2);
             panelInferiorBotonesDerecha.Name = "panelInferiorBotonesDerecha";
             panelInferiorBotonesDerecha.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            panelInferiorBotonesDerecha.Size = new Size(22, 78);
+            panelInferiorBotonesDerecha.Size = new Size(19, 58);
             panelInferiorBotonesDerecha.TabIndex = 1;
             // 
             // panelInferiorBotonesIzquierda
@@ -468,9 +476,10 @@
             panelInferiorBotonesIzquierda.CustomizableEdges = customizableEdges15;
             panelInferiorBotonesIzquierda.Dock = DockStyle.Left;
             panelInferiorBotonesIzquierda.Location = new Point(0, 0);
+            panelInferiorBotonesIzquierda.Margin = new Padding(3, 2, 3, 2);
             panelInferiorBotonesIzquierda.Name = "panelInferiorBotonesIzquierda";
             panelInferiorBotonesIzquierda.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            panelInferiorBotonesIzquierda.Size = new Size(22, 78);
+            panelInferiorBotonesIzquierda.Size = new Size(19, 58);
             panelInferiorBotonesIzquierda.TabIndex = 0;
             // 
             // guna2Panel2
@@ -484,9 +493,10 @@
             guna2Panel2.CustomizableEdges = customizableEdges27;
             guna2Panel2.Dock = DockStyle.Top;
             guna2Panel2.Location = new Point(0, 0);
+            guna2Panel2.Margin = new Padding(3, 2, 3, 2);
             guna2Panel2.Name = "guna2Panel2";
             guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges28;
-            guna2Panel2.Size = new Size(444, 71);
+            guna2Panel2.Size = new Size(387, 53);
             guna2Panel2.TabIndex = 0;
             // 
             // panelInicioSesionFinal
@@ -494,10 +504,11 @@
             panelInicioSesionFinal.Controls.Add(lblInicioDeSesion);
             panelInicioSesionFinal.CustomizableEdges = customizableEdges21;
             panelInicioSesionFinal.Dock = DockStyle.Fill;
-            panelInicioSesionFinal.Location = new Point(54, 0);
+            panelInicioSesionFinal.Location = new Point(47, 0);
+            panelInicioSesionFinal.Margin = new Padding(3, 2, 3, 2);
             panelInicioSesionFinal.Name = "panelInicioSesionFinal";
             panelInicioSesionFinal.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            panelInicioSesionFinal.Size = new Size(336, 71);
+            panelInicioSesionFinal.Size = new Size(293, 53);
             panelInicioSesionFinal.TabIndex = 2;
             // 
             // lblInicioDeSesion
@@ -505,10 +516,9 @@
             lblInicioDeSesion.BackColor = Color.Transparent;
             lblInicioDeSesion.Font = new Font("Bahnschrift SemiCondensed", 25.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblInicioDeSesion.ForeColor = Color.Gainsboro;
-            lblInicioDeSesion.Location = new Point(0, 13);
-            lblInicioDeSesion.Margin = new Padding(3, 4, 3, 4);
+            lblInicioDeSesion.Location = new Point(0, 10);
             lblInicioDeSesion.Name = "lblInicioDeSesion";
-            lblInicioDeSesion.Size = new Size(260, 54);
+            lblInicioDeSesion.Size = new Size(208, 43);
             lblInicioDeSesion.TabIndex = 1;
             lblInicioDeSesion.Text = "Inicio de sesión";
             lblInicioDeSesion.TextAlignment = ContentAlignment.MiddleCenter;
@@ -517,10 +527,11 @@
             // 
             guna2Panel4.CustomizableEdges = customizableEdges23;
             guna2Panel4.Dock = DockStyle.Right;
-            guna2Panel4.Location = new Point(390, 0);
+            guna2Panel4.Location = new Point(340, 0);
+            guna2Panel4.Margin = new Padding(3, 2, 3, 2);
             guna2Panel4.Name = "guna2Panel4";
             guna2Panel4.ShadowDecoration.CustomizableEdges = customizableEdges24;
-            guna2Panel4.Size = new Size(54, 71);
+            guna2Panel4.Size = new Size(47, 53);
             guna2Panel4.TabIndex = 1;
             // 
             // guna2Panel3
@@ -528,20 +539,22 @@
             guna2Panel3.CustomizableEdges = customizableEdges25;
             guna2Panel3.Dock = DockStyle.Left;
             guna2Panel3.Location = new Point(0, 0);
+            guna2Panel3.Margin = new Padding(3, 2, 3, 2);
             guna2Panel3.Name = "guna2Panel3";
             guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges26;
-            guna2Panel3.Size = new Size(54, 71);
+            guna2Panel3.Size = new Size(47, 53);
             guna2Panel3.TabIndex = 0;
             // 
             // LoginInicio
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1350, 751);
+            ClientSize = new Size(1181, 563);
             Controls.Add(tblCredenciales);
             Controls.Add(panelHeader);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "LoginInicio";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";

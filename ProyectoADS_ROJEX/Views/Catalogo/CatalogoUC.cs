@@ -1,124 +1,96 @@
-﻿using Bogus;
-using ProyectoADS_ROJEX;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.IO;
+using System.Windows.Forms;
+using ProyectoADS_ROJEX;
+using ProyectoADS_ROJEX.ConexionDB; // Para usar tu conexión
 
 namespace HerramientasTotal.Views.Productos
 {
     public partial class CatalogoUC : UserControl
     {
-        //conector con la clase ProductoRow
         public CatalogoUC()
         {
             InitializeComponent();
-            CargarCatalogo();
-            
+
+            // 1. Cargamos datos reales de la BD al iniciar
+            CargarCatalogoDesdeBD();
 
             cmbCategoriaProductoMovimientos.DataSource = new List<string>
             {
-
-               "Deportivos",
-               "Lujo",
-               "Casuales",
-                "Todas"
+               "Deportivos", "Lujo", "Casuales", "Todas"
             };
             cmbCategoriaProductoMovimientos.SelectedIndex = 3;
-
         }
 
-        private void CargarCatalogo()
+        private void CargarCatalogoDesdeBD()
         {
-            agregarProductoCarrito1.Configurar(
-                CargarImagenProducto("appleWatchS9.jpg"),
-                "Apple Watch S9 45MM",
-                "$ 499.00",
-                "Agregados: 2 | tot: $999"
-            );
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Conexion.AppConnectionString))
+                {
+                    conn.Open();
+                    // Traemos los datos de tu vista (Nombre, Precio y la Marca para el título)
+                    string query = "SELECT TOP 8 Nombre, Precio, Marca FROM dbo.Inventario";
 
-            agregarProductoCarrito2.Configurar(
-                CargarImagenProducto("CasioDBC301.jpg"),
-                "Casio DBC-301",
-                "$ 89.00",
-                "Agregados: 1 | tot: $89"
-            );
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    SqlDataReader reader = cmd.ExecuteReader();
 
-            agregarProductoCarrito3.Configurar(
-                CargarImagenProducto("CasioGShock.jpg"),
-                "Casio G-Shock",
-                "$ 129.00",
-                "Agregados: 3 | tot: $387"
-            );
+                    // Metemos tus 8 controles en una lista para manejarlos con un ciclo
+                    var tarjetas = new List<AgregarProductoCarrito>
+                    {
+                        agregarProductoCarrito1, agregarProductoCarrito2, agregarProductoCarrito3,
+                        agregarProductoCarrito4, agregarProductoCarrito5, agregarProductoCarrito6,
+                        agregarProductoCarrito7, agregarProductoCarrito8
+                    };
 
-            agregarProductoCarrito4.Configurar(
-                CargarImagenProducto("CasioVingatePlateado.jpg"),
-                "Casio Vintage Plateado",
-                "$ 75.00",
-                "Agregados: 1 | tot: $75"
-            );
+                    int i = 0;
+                    while (reader.Read() && i < tarjetas.Count)
+                    {
+                        string nombreCompleto = $"{reader["Marca"]} {reader["Nombre"]}";
+                        decimal precio = Convert.ToDecimal(reader["Precio"]);
 
-            agregarProductoCarrito5.Configurar(
-                CargarImagenProducto("GalaxyWatch8.jpg"),
-                "Galaxy Watch 8",
-                "$ 399.00",
-                "Agregados: 2 | tot: $798"
-            );
+                        // Buscamos la imagen. Si no existe, el método devuelve null y no truena.
+                        Image img = CargarImagenProducto($"{reader["Nombre"]}.jpg");
 
-            agregarProductoCarrito6.Configurar(
-                CargarImagenProducto("HamiltonKhakiFieldMurph.jpg"),
-                "Hamilton Khaki Field",
-                "$ 649.00",
-                "Agregados: 1 | tot: $649"
-            );
+                        // Usamos el método de 3 argumentos que arreglamos antes
+                        tarjetas[i].Configurar(img, nombreCompleto, precio);
+                        tarjetas[i].Visible = true;
+                        i++;
+                    }
 
-            agregarProductoCarrito7.Configurar(
-                CargarImagenProducto("omnitrix.jpg"),
-                "Omnitrix Clásico",
-                "$ 59.00",
-                "Agregados: 4 | tot: $236"
-            );
-
-            agregarProductoCarrito8.Configurar(
-                CargarImagenProducto("RolexTime4Diamonds.jpg"),
-                "Rolex Time Diamond",
-                "$ 999.00",
-                "Agregados: 1 | tot: $999"
-            );
+                    // Si hay menos de 8 productos, ocultamos las tarjetas sobrantes
+                    for (int j = i; j < tarjetas.Count; j++)
+                    {
+                        tarjetas[j].Visible = false;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al conectar con la BD para el catálogo: " + ex.Message, "Error de Datos");
+            }
         }
 
         private Image CargarImagenProducto(string nombreArchivo)
         {
+            // Ruta limpia combinando la carpeta de ejecución con Resources
             string ruta = Path.Combine(Application.StartupPath, "Resources", "Products", nombreArchivo);
 
-            if (!File.Exists(ruta))
-            {
-                MessageBox.Show("No se encontró la imagen:\n" + ruta);
-                return null;
-            }
+            if (!File.Exists(ruta)) return null;
 
             try
             {
+                // Usamos FileStream para que la imagen no se quede "bloqueada" por Windows
                 using (var fs = new FileStream(ruta, FileMode.Open, FileAccess.Read))
                 {
                     return Image.FromStream(fs);
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al cargar la imagen:\n" + ex.Message);
-                return null;
-            }
+            catch { return null; }
         }
-
-
-
-
     }
 }
