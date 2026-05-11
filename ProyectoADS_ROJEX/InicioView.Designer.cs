@@ -303,6 +303,7 @@
             btnAgregarProd.Size = new Size(202, 53);
             btnAgregarProd.TabIndex = 44;
             btnAgregarProd.Text = "Agregar producto";
+            btnAgregarProd.Click += btnAgregarProd_Click;
             // 
             // InicioView
             // 

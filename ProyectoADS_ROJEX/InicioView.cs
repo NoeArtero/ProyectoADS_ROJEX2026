@@ -2,6 +2,7 @@ using Guna.UI2.WinForms;
 using HerramientasTotal.Views;
 using HerramientasTotal.Views.Productos;
 using ProyectoADS_ROJEX.Views;
+using ProyectoADS_ROJEX.Views.Administrador;
 using ProyectoADS_ROJEX.Views.Perfil;
 
 
@@ -77,7 +78,7 @@ namespace HerramientasTotal
 
         //}
 
-      
+
         private void btnInicio_Click(object sender, EventArgs e)
         {
 
@@ -111,11 +112,18 @@ namespace HerramientasTotal
 
         }
 
+        private void btnAgregarProd_Click(object sender, EventArgs e)
+        {
+            BotonSeleccionado(btnAgregarProd);
+            ShowView<AgregarProductoUC>();
+        }
+
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
             Environment.Exit(0);
         }
 
+       
     }
 }
