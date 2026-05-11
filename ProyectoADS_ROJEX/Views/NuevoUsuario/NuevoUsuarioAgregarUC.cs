@@ -1,7 +1,9 @@
-﻿using System;
+﻿using ProyectoADS_ROJEX.ConexionDB;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
@@ -11,45 +13,114 @@ namespace ProyectoADS_ROJEX.Views.NuevoUsuario
 {
     public partial class NuevoUsuarioAgregarUC : UserControl
     {
+        // Ruta para guardar la imagen localmente
+        private string rutaImagenTemporal = "";
+        private const string LLAVE_MAESTRA = "ROJEX2026";
+
         public NuevoUsuarioAgregarUC()
         {
             InitializeComponent();
-            cmbGeneroUsuarioAgregar.Items.Add("Masculino");
-            cmbGeneroUsuarioAgregar.Items.Add("Femenino");
-            cmbGeneroUsuarioAgregar.Items.Add("Prefiero no decir");
+
+            // Llenar combo
+            cmbGeneroUsuarioAgregar.Items.Clear();
+            cmbGeneroUsuarioAgregar.Items.AddRange(new string[] { "Masculino", "Femenino", "Prefiero no decir" });
             cmbGeneroUsuarioAgregar.SelectedIndex = 0;
+
+            // OCULTAR controles de admin al iniciar
+            lblLlaveAdmin.Visible = false;
+            txtLlaveAdmin.Visible = false;
         }
         //validar espacios vacíos
         private bool valido()
         {
-            bool valido = false;
-            if (txtContra.Text.IsWhiteSpace() || txtAgregarNumeroUsuario.Text.IsWhiteSpace() || txtAgregarNombreUsuario.Text.IsWhiteSpace() ||
-                txtAgregarCorreo.Text.IsWhiteSpace() || txtDireccionAgregarUsuario.Text.IsWhiteSpace())
+            if (string.IsNullOrWhiteSpace(txtContra.Text) ||
+                            string.IsNullOrWhiteSpace(txtAgregarNumeroUsuario.Text) ||
+                            string.IsNullOrWhiteSpace(txtAgregarNombreUsuario.Text) ||
+                            string.IsNullOrWhiteSpace(txtAgregarCorreo.Text) ||
+                            string.IsNullOrWhiteSpace(txtDireccionAgregarUsuario.Text))
             {
                 return false;
             }
-            else
-            {
-                return true;
-            }
+            return true;
         }
 
         private void btnAgregarProveedor_Click(object sender, EventArgs e)
         {
             if (!valido())
             {
-                MessageBox.Show("Verifique que los espacios estén correctamente llenados", "Error de agregado",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Por favor, llene todos los campos obligatorios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
-            else
+
+            bool esAdmin = false;
+
+            // VALIDACIÓN DE LLAVE ADMIN
+            if (rbEsAdmin.Checked)
             {
-                if (MessageBox.Show("¿Seguro que quiere guardar este usuario?", "Agregar usuario",
-                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (txtLlaveAdmin.Text != LLAVE_MAESTRA)
                 {
-                    Parent.Controls.Remove(this);
-                    MessageBox.Show("Usuario agregado con éxito.", "Usuario agregado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("La llave de administrador es incorrecta.", "Seguridad", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    return;
                 }
+                esAdmin = true;
             }
+
+            if (MessageBox.Show("¿Seguro que quiere guardar este usuario?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                RegistrarEnBaseDatos(esAdmin);
+            }
+        }
+        private void RegistrarEnBaseDatos(bool esAdmin)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Conexion.AppConnectionString))
+                {
+                    conn.Open();
+                    string sql = @"INSERT INTO Usuario (NombreUsuario, Correo, Contraseña, Telefono, Genero, Direccion, EsAdmin) 
+                                   VALUES (@user, @correo, @pass, @tel, @gen, @dir, @admin)";
+
+                    using (SqlCommand cmd = new SqlCommand(sql, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@user", txtAgregarNombreUsuario.Text.Trim());
+                        cmd.Parameters.AddWithValue("@correo", txtAgregarCorreo.Text.Trim());
+                        cmd.Parameters.AddWithValue("@pass", txtContra.Text.Trim()); // Lo ideal sería encriptarla, pero para el proyecto está bien así
+                        cmd.Parameters.AddWithValue("@tel", txtAgregarNumeroUsuario.Text.Trim());
+                        cmd.Parameters.AddWithValue("@gen", cmbGeneroUsuarioAgregar.Text);
+                        cmd.Parameters.AddWithValue("@dir", txtDireccionAgregarUsuario.Text.Trim());
+                        cmd.Parameters.AddWithValue("@admin", esAdmin);
+
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+
+
+                // Guardar imagen si seleccionó una
+                if (!string.IsNullOrEmpty(rutaImagenTemporal))
+                {
+                    GuardarImagenLocal(txtAgregarNombreUsuario.Text.Trim());
+                }
+
+                MessageBox.Show("Usuario registrado con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Parent?.Controls.Remove(this); // Cerrar vista
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al guardar en la BD: " + ex.Message, "Error Crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void GuardarImagenLocal(string nombreUsuario)
+        {
+            try
+            {
+                string carpeta = Path.Combine(Application.StartupPath, "Resources", "Profiles");
+                if (!Directory.Exists(carpeta)) Directory.CreateDirectory(carpeta);
+
+                string destino = Path.Combine(carpeta, nombreUsuario + ".jpg");
+                File.Copy(rutaImagenTemporal, destino, true);
+            }
+            catch { /* Ignorar errores de imagen para no trabar el registro */ }
         }
 
         private void btnCancelarAgregarProveedor_Click(object sender, EventArgs e)
@@ -64,13 +135,32 @@ namespace ProyectoADS_ROJEX.Views.NuevoUsuario
 
         private void btnElegirImagenProveedor_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Archivos de imagen|*.jpg;*.jpeg;*.png;*.bmp;*.gif";
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Imagenes|*.jpg;*.png;*.jpeg";
+            if (ofd.ShowDialog() == DialogResult.OK)
             {
-                string rutaImagen = openFileDialog.FileName;
-                imgAgregarUsuario.Image = Image.FromFile(rutaImagen);
-                imgAgregarUsuario.SizeMode = PictureBoxSizeMode.StretchImage;
+                rutaImagenTemporal = ofd.FileName;
+                imgAgregarUsuabtnElegirImagenProveedorrio.Image = Image.FromFile(rutaImagenTemporal);
+            }
+        }
+
+        private void txtAgregarNumeroUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbEsAdmin_CheckedChanged(object sender, EventArgs e)
+        {
+            lblLlaveAdmin.Visible = rbEsAdmin.Checked;
+            txtLlaveAdmin.Visible = rbEsAdmin.Checked;
+
+            if (rbEsAdmin.Checked)
+            {
+                txtLlaveAdmin.Focus();
+            }
+            else
+            {
+                txtLlaveAdmin.Clear();
             }
         }
     }
