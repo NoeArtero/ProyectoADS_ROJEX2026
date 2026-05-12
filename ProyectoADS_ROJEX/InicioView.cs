@@ -124,6 +124,17 @@ namespace HerramientasTotal
             Environment.Exit(0);
         }
 
-       
+        public void ActualizarNotificacionCarrito()
+        {
+            foreach (Control c in ViewHost.Controls)
+            {
+                // Si la pantalla del carrito está abierta, la refresca
+                if (c is CarritoUC carritoVista && c.Visible)
+                {
+                    carritoVista.RefrescarDatosCarrito();
+                }
+            }
+        }
+
     }
 }

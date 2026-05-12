@@ -1,24 +1,31 @@
-﻿using System.IO;
-using System.ComponentModel;
+﻿using HerramientasTotal;
+using ProyectoADS_ROJEX.ConexionDB;
+using ProyectoADS_ROJEX.Models;
 using System;
+using System.ComponentModel;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
+
 
 namespace ProyectoADS_ROJEX
 {
     public partial class AgregarProductoCarrito : UserControl
     {
+        private int _existenciasTotales = 0;
+        private string _idProducto = "";
+        private string _categoria = "";
         private decimal precioUnitario = 0;
-        private int cantidad = 0;
+        private int cantidadLocal = 0;
 
         public AgregarProductoCarrito()
         {
             InitializeComponent();
+
             guna2HtmlLabel1.Visible = false;
             guna2HtmlLabel3.Visible = false;
         }
 
-        // ESTO ARREGLA EL ERROR DE SERIALIZACIÓN
         [Browsable(false)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public decimal Precio
@@ -59,20 +66,21 @@ namespace ProyectoADS_ROJEX
             set => lbltotal.Text = value;
         }
 
-        // USAMOS SOLO ESTA VERSIÓN DE CONFIGURAR (LA QUE USA DECIMAL)
-        public void Configurar(Image imagen, string nombre, decimal precio, int existencias)
+        public void Configurar(Image imagen, string nombre, decimal precio, int existencias, string idProducto, string categoria)
         {
             picAgregarProdCarrito.Image = imagen;
             lblProductoNombre.Text = nombre;
             this.precioUnitario = precio;
-            this.cantidad = 0;
+
+            this._idProducto = idProducto;
+            this._categoria = categoria;
+            this._existenciasTotales = existencias; // Guardamos el límite real de la BD
+
+            this.cantidadLocal = ProyectoADS_ROJEX.ConexionDB.GestorCarrito.ObtenerCantidadProducto(idProducto);
 
             btnMostrarPrecio.Text = $"$ {precio:N2}";
 
-            // AQUÍ MANDAMOS EL NÚMERO A TU LABEL
-            lblInventario.Text = $"Disponibles: {existencias}";
-
-            ActualizarResumen();
+            ActualizarResumenTarjeta();
         }
 
         public Image CargarImagenProducto(string nombreArchivo)
@@ -83,24 +91,47 @@ namespace ProyectoADS_ROJEX
             return null;
         }
 
-        private void ActualizarResumen()
+        private void ActualizarResumenTarjeta()
         {
-            decimal total = precioUnitario * cantidad;
-            lbltotal.Text = $"Agregados: {cantidad} | tot: ${total:N2}";
-        }
+            decimal totalLocal = precioUnitario * cantidadLocal;
+            lbltotal.Text = $"Agregados: {cantidadLocal} | tot: ${totalLocal:N2}";
 
+            int inventarioVisual = _existenciasTotales - cantidadLocal;
+            lblInventario.Text = $"Disponibles: {inventarioVisual}";
+        }
         private void btnAgregarUnoProdCarrito_Click(object sender, EventArgs e)
         {
-            cantidad++;
-            ActualizarResumen();
-        }
+           // Solo dejamos agregar si todavía quedan en inventario
+            if (cantidadLocal < _existenciasTotales)
+            {
+                cantidadLocal++;
+                ActualizarResumenTarjeta();
 
+                ProyectoADS_ROJEX.Models.CarritoItem itemNuevo = new ProyectoADS_ROJEX.Models.CarritoItem
+                {
+                    Fotografia = picAgregarProdCarrito.Image,
+                    Codigo = _idProducto,
+                    Nombre = lblProductoNombre.Text,
+                    Categoria = _categoria,
+                    Costo = precioUnitario,
+                    Cantidad = 1
+                };
+
+                ProyectoADS_ROJEX.ConexionDB.GestorCarrito.AgregarProducto(itemNuevo);
+            }
+            else
+            {
+                MessageBox.Show("No puedes agregar más. Has alcanzado el límite de existencias.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
         private void btnQuitarUnoProdCarrito_Click(object sender, EventArgs e)
         {
-            if (cantidad > 0)
+            if (cantidadLocal > 0)
             {
-                cantidad--;
-                ActualizarResumen();
+                cantidadLocal--;
+                ActualizarResumenTarjeta();
+
+                ProyectoADS_ROJEX.ConexionDB.GestorCarrito.RestarProducto(_idProducto);
             }
         }
     }

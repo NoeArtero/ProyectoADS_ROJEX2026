@@ -6,7 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using ProyectoADS_ROJEX;
-using ProyectoADS_ROJEX.ConexionDB; // Para usar tu conexión
+using ProyectoADS_ROJEX.ConexionDB; 
 
 namespace HerramientasTotal.Views.Productos
 {
@@ -16,7 +16,7 @@ namespace HerramientasTotal.Views.Productos
         {
             InitializeComponent();
 
-            // Hace que se actualice cada vez que entrás a la pestaña
+            // Hace que se actualice cada vez que entramos a la pestaña
             this.VisibleChanged += CatalogoUC_VisibleChanged;
 
             CargarCatalogoDesdeBD();
@@ -44,9 +44,8 @@ namespace HerramientasTotal.Views.Productos
                 {
                     conn.Open();
 
-                    // Consulta con JOIN para traer los datos y las existencias
-                    string query = @"SELECT TOP 8 i.IdProducto, i.Nombre, i.Precio, i.Marca, ip.CantidadDisponible 
-                                     FROM dbo.Inventario i
+                    string query = @"SELECT TOP 8 i.IdProducto, i.Nombre, i.Precio, i.Marca, i.NombreModelo, ip.CantidadDisponible 
+                                     FROM dbo.Inventario i 
                                      INNER JOIN InfoProducto ip ON i.IdProducto = ip.IdProducto 
                                      ORDER BY i.IdProducto DESC";
 
@@ -65,20 +64,19 @@ namespace HerramientasTotal.Views.Productos
                     {
                         string nombreCompleto = $"{reader["Marca"]} {reader["Nombre"]}";
                         decimal precio = Convert.ToDecimal(reader["Precio"]);
-                        string idProd = reader["IdProducto"].ToString();
 
-                        // Sacamos el número de existencias
+                        string idProd = reader["IdProducto"].ToString();
                         int existencias = Convert.ToInt32(reader["CantidadDisponible"]);
+
+                        string categoria = reader["NombreModelo"].ToString();
 
                         Image img = CargarImagenProducto($"{idProd}.jpg");
 
-                        // Llenamos la tarjetita
-                        tarjetas[i].Configurar(img, nombreCompleto, precio, existencias);
+                        tarjetas[i].Configurar(img, nombreCompleto, precio, existencias, idProd, categoria);
                         tarjetas[i].Visible = true;
                         i++;
                     }
 
-                    // Ocultamos las tarjetas que no se usan
                     for (int j = i; j < tarjetas.Count; j++)
                     {
                         tarjetas[j].Visible = false;
