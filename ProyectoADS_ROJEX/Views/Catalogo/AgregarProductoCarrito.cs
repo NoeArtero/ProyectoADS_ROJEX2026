@@ -60,7 +60,7 @@ namespace ProyectoADS_ROJEX
         }
 
         // USAMOS SOLO ESTA VERSIÓN DE CONFIGURAR (LA QUE USA DECIMAL)
-        public void Configurar(Image imagen, string nombre, decimal precio)
+        public void Configurar(Image imagen, string nombre, decimal precio, int existencias)
         {
             picAgregarProdCarrito.Image = imagen;
             lblProductoNombre.Text = nombre;
@@ -68,6 +68,10 @@ namespace ProyectoADS_ROJEX
             this.cantidad = 0;
 
             btnMostrarPrecio.Text = $"$ {precio:N2}";
+
+            // AQUÍ MANDAMOS EL NÚMERO A TU LABEL
+            lblInventario.Text = $"Disponibles: {existencias}";
+
             ActualizarResumen();
         }
 
