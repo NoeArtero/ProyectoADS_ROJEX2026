@@ -65,7 +65,6 @@
             lblTitulo = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2Shapes1 = new Guna.UI2.WinForms.Guna2Shapes();
             PanelArticulos = new Guna.UI2.WinForms.Guna2Panel();
-            lblTotalProductos = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lblHora = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lblFecha = new Guna.UI2.WinForms.Guna2HtmlLabel();
             PanelBotonesAccion = new Guna.UI2.WinForms.Guna2Panel();
@@ -74,6 +73,8 @@
             PanelDGVProd = new Guna.UI2.WinForms.Guna2Panel();
             dgvProductos = new Guna.UI2.WinForms.Guna2DataGridView();
             FotoProducto = new DataGridViewImageColumn();
+            Cantidad = new DataGridViewTextBoxColumn();
+            Fecha = new DataGridViewTextBoxColumn();
             codigo = new DataGridViewTextBoxColumn();
             nProducto = new DataGridViewTextBoxColumn();
             catProd = new DataGridViewTextBoxColumn();
@@ -82,7 +83,6 @@
             panelHeader.SuspendLayout();
             panelBotones.SuspendLayout();
             panelTitulo.SuspendLayout();
-            PanelArticulos.SuspendLayout();
             PanelBotonesAccion.SuspendLayout();
             PanelDGVProd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvProductos).BeginInit();
@@ -101,14 +101,13 @@
             panelHeader.Dock = DockStyle.Top;
             panelHeader.FillColor = Color.FromArgb(28, 30, 68);
             panelHeader.Location = new Point(0, 0);
-            panelHeader.Margin = new Padding(3, 4, 3, 4);
             panelHeader.Name = "panelHeader";
-            panelHeader.Padding = new Padding(18, 16, 18, 16);
+            panelHeader.Padding = new Padding(16, 12, 16, 12);
             panelHeader.ShadowDecoration.BorderRadius = 5;
             panelHeader.ShadowDecoration.Color = Color.FromArgb(29, 27, 52);
             panelHeader.ShadowDecoration.CustomizableEdges = customizableEdges21;
             panelHeader.ShadowDecoration.Depth = 5;
-            panelHeader.Size = new Size(1451, 93);
+            panelHeader.Size = new Size(1270, 70);
             panelHeader.TabIndex = 1;
             // 
             // panelBotones
@@ -120,10 +119,11 @@
             panelBotones.Controls.Add(cmbCategoriaProducto);
             panelBotones.CustomizableEdges = customizableEdges13;
             panelBotones.Dock = DockStyle.Left;
-            panelBotones.Location = new Point(191, 16);
+            panelBotones.Location = new Point(167, 12);
+            panelBotones.Margin = new Padding(3, 2, 3, 2);
             panelBotones.Name = "panelBotones";
             panelBotones.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            panelBotones.Size = new Size(927, 61);
+            panelBotones.Size = new Size(811, 46);
             panelBotones.TabIndex = 10;
             // 
             // lblBuscar
@@ -131,10 +131,9 @@
             lblBuscar.BackColor = Color.Transparent;
             lblBuscar.Font = new Font("Bahnschrift SemiCondensed", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblBuscar.ForeColor = Color.Gainsboro;
-            lblBuscar.Location = new Point(6, 14);
-            lblBuscar.Margin = new Padding(3, 4, 3, 4);
+            lblBuscar.Location = new Point(5, 10);
             lblBuscar.Name = "lblBuscar";
-            lblBuscar.Size = new Size(76, 32);
+            lblBuscar.Size = new Size(61, 26);
             lblBuscar.TabIndex = 3;
             lblBuscar.Text = "Buscar: ";
             lblBuscar.TextAlignment = ContentAlignment.MiddleCenter;
@@ -151,13 +150,13 @@
             txtBuscarProd.Font = new Font("Bahnschrift", 10F);
             txtBuscarProd.ForeColor = Color.DimGray;
             txtBuscarProd.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtBuscarProd.Location = new Point(81, 14);
-            txtBuscarProd.Margin = new Padding(6, 7, 6, 7);
+            txtBuscarProd.Location = new Point(71, 10);
+            txtBuscarProd.Margin = new Padding(5);
             txtBuscarProd.Name = "txtBuscarProd";
             txtBuscarProd.PlaceholderText = "Item, valor o código";
             txtBuscarProd.SelectedText = "";
             txtBuscarProd.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            txtBuscarProd.Size = new Size(182, 29);
+            txtBuscarProd.Size = new Size(159, 22);
             txtBuscarProd.TabIndex = 4;
             // 
             // guna2HtmlLabel2
@@ -165,10 +164,9 @@
             guna2HtmlLabel2.BackColor = Color.Transparent;
             guna2HtmlLabel2.Font = new Font("Bahnschrift SemiCondensed", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2HtmlLabel2.ForeColor = Color.Gainsboro;
-            guna2HtmlLabel2.Location = new Point(272, 14);
-            guna2HtmlLabel2.Margin = new Padding(3, 4, 3, 4);
+            guna2HtmlLabel2.Location = new Point(238, 10);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            guna2HtmlLabel2.Size = new Size(103, 32);
+            guna2HtmlLabel2.Size = new Size(79, 26);
             guna2HtmlLabel2.TabIndex = 5;
             guna2HtmlLabel2.Text = "Categoría:";
             guna2HtmlLabel2.TextAlignment = ContentAlignment.MiddleCenter;
@@ -185,11 +183,10 @@
             cmbCategoriaProducto.ForeColor = Color.DimGray;
             cmbCategoriaProducto.ItemHeight = 30;
             cmbCategoriaProducto.ItemsAppearance.SelectedBackColor = Color.FromArgb(224, 224, 224);
-            cmbCategoriaProducto.Location = new Point(381, 14);
-            cmbCategoriaProducto.Margin = new Padding(3, 4, 3, 4);
+            cmbCategoriaProducto.Location = new Point(333, 10);
             cmbCategoriaProducto.Name = "cmbCategoriaProducto";
             cmbCategoriaProducto.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            cmbCategoriaProducto.Size = new Size(209, 36);
+            cmbCategoriaProducto.Size = new Size(183, 36);
             cmbCategoriaProducto.TabIndex = 6;
             // 
             // panelTitulo
@@ -199,10 +196,11 @@
             panelTitulo.Controls.Add(guna2Shapes1);
             panelTitulo.CustomizableEdges = customizableEdges16;
             panelTitulo.Dock = DockStyle.Left;
-            panelTitulo.Location = new Point(18, 16);
+            panelTitulo.Location = new Point(16, 12);
+            panelTitulo.Margin = new Padding(3, 2, 3, 2);
             panelTitulo.Name = "panelTitulo";
             panelTitulo.ShadowDecoration.CustomizableEdges = customizableEdges17;
-            panelTitulo.Size = new Size(173, 61);
+            panelTitulo.Size = new Size(151, 46);
             panelTitulo.TabIndex = 9;
             // 
             // lblTitulo
@@ -210,10 +208,9 @@
             lblTitulo.BackColor = Color.Transparent;
             lblTitulo.Font = new Font("Bahnschrift SemiCondensed", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblTitulo.ForeColor = Color.Gainsboro;
-            lblTitulo.Location = new Point(3, 5);
-            lblTitulo.Margin = new Padding(3, 4, 3, 4);
+            lblTitulo.Location = new Point(3, 4);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(137, 43);
+            lblTitulo.Size = new Size(108, 35);
             lblTitulo.TabIndex = 0;
             lblTitulo.Text = "Productos";
             lblTitulo.TextAlignment = ContentAlignment.MiddleCenter;
@@ -223,14 +220,13 @@
             guna2Shapes1.BackColor = Color.Transparent;
             guna2Shapes1.BorderColor = Color.White;
             guna2Shapes1.FillColor = Color.White;
-            guna2Shapes1.Location = new Point(146, -12);
-            guna2Shapes1.Margin = new Padding(3, 4, 3, 4);
+            guna2Shapes1.Location = new Point(128, -9);
             guna2Shapes1.Name = "guna2Shapes1";
             guna2Shapes1.PolygonSides = 2;
             guna2Shapes1.PolygonSkip = 1;
             guna2Shapes1.Rotate = 0F;
             guna2Shapes1.RoundedEdges = customizableEdges15;
-            guna2Shapes1.Size = new Size(22, 93);
+            guna2Shapes1.Size = new Size(19, 70);
             guna2Shapes1.TabIndex = 2;
             guna2Shapes1.UseTransparentBackground = true;
             guna2Shapes1.Zoom = 80;
@@ -238,31 +234,15 @@
             // PanelArticulos
             // 
             PanelArticulos.BackColor = Color.Transparent;
-            PanelArticulos.Controls.Add(lblTotalProductos);
             PanelArticulos.CustomizableEdges = customizableEdges18;
             PanelArticulos.Dock = DockStyle.Right;
-            PanelArticulos.Location = new Point(1208, 16);
-            PanelArticulos.Margin = new Padding(3, 4, 3, 4);
+            PanelArticulos.Location = new Point(1057, 12);
             PanelArticulos.Name = "PanelArticulos";
-            PanelArticulos.Padding = new Padding(0, 11, 9, 11);
+            PanelArticulos.Padding = new Padding(0, 8, 8, 8);
             PanelArticulos.ShadowDecoration.CustomizableEdges = customizableEdges19;
-            PanelArticulos.Size = new Size(225, 61);
+            PanelArticulos.Size = new Size(197, 46);
             PanelArticulos.TabIndex = 1;
             PanelArticulos.UseTransparentBackground = true;
-            // 
-            // lblTotalProductos
-            // 
-            lblTotalProductos.BackColor = Color.Transparent;
-            lblTotalProductos.Dock = DockStyle.Right;
-            lblTotalProductos.Font = new Font("Bahnschrift SemiCondensed", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTotalProductos.ForeColor = Color.Gainsboro;
-            lblTotalProductos.Location = new Point(52, 11);
-            lblTotalProductos.Margin = new Padding(3, 4, 3, 4);
-            lblTotalProductos.Name = "lblTotalProductos";
-            lblTotalProductos.Size = new Size(164, 32);
-            lblTotalProductos.TabIndex = 3;
-            lblTotalProductos.Text = "N° de productos:";
-            lblTotalProductos.TextAlignment = ContentAlignment.MiddleRight;
             // 
             // lblHora
             // 
@@ -271,7 +251,7 @@
             lblHora.ForeColor = Color.Gainsboro;
             lblHora.Location = new Point(307, 14);
             lblHora.Name = "lblHora";
-            lblHora.Size = new Size(93, 38);
+            lblHora.Size = new Size(73, 31);
             lblHora.TabIndex = 1;
             lblHora.Text = "--:--:--";
             lblHora.TextAlignment = ContentAlignment.MiddleRight;
@@ -283,7 +263,7 @@
             lblFecha.ForeColor = Color.Gainsboro;
             lblFecha.Location = new Point(3, 14);
             lblFecha.Name = "lblFecha";
-            lblFecha.Size = new Size(101, 38);
+            lblFecha.Size = new Size(79, 31);
             lblFecha.TabIndex = 2;
             lblFecha.Text = "--/--/--";
             lblFecha.TextAlignment = ContentAlignment.MiddleRight;
@@ -294,11 +274,10 @@
             PanelBotonesAccion.Controls.Add(btnAgregarProducto);
             PanelBotonesAccion.CustomizableEdges = customizableEdges7;
             PanelBotonesAccion.Dock = DockStyle.Top;
-            PanelBotonesAccion.Location = new Point(0, 93);
-            PanelBotonesAccion.Margin = new Padding(3, 4, 3, 4);
+            PanelBotonesAccion.Location = new Point(0, 70);
             PanelBotonesAccion.Name = "PanelBotonesAccion";
             PanelBotonesAccion.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            PanelBotonesAccion.Size = new Size(1451, 97);
+            PanelBotonesAccion.Size = new Size(1270, 73);
             PanelBotonesAccion.TabIndex = 2;
             // 
             // btnEliminarProducto
@@ -316,11 +295,10 @@
             btnEliminarProducto.Image = ProyectoADS_ROJEX.Properties.Resources.Eliminar1;
             btnEliminarProducto.ImageOffset = new Point(12, -8);
             btnEliminarProducto.ImageSize = new Size(47, 47);
-            btnEliminarProducto.Location = new Point(701, 4);
-            btnEliminarProducto.Margin = new Padding(3, 4, 3, 4);
+            btnEliminarProducto.Location = new Point(613, 3);
             btnEliminarProducto.Name = "btnEliminarProducto";
             btnEliminarProducto.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnEliminarProducto.Size = new Size(92, 85);
+            btnEliminarProducto.Size = new Size(80, 64);
             btnEliminarProducto.TabIndex = 2;
             btnEliminarProducto.Text = "Eliminar";
             btnEliminarProducto.TextOffset = new Point(-15, 25);
@@ -340,12 +318,11 @@
             btnAgregarProducto.Image = ProyectoADS_ROJEX.Properties.Resources.PagarContado;
             btnAgregarProducto.ImageOffset = new Point(13, -7);
             btnAgregarProducto.ImageSize = new Size(55, 55);
-            btnAgregarProducto.Location = new Point(590, 4);
-            btnAgregarProducto.Margin = new Padding(3, 4, 3, 4);
+            btnAgregarProducto.Location = new Point(516, 3);
             btnAgregarProducto.Name = "btnAgregarProducto";
             btnAgregarProducto.PressedColor = Color.Gainsboro;
             btnAgregarProducto.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnAgregarProducto.Size = new Size(83, 85);
+            btnAgregarProducto.Size = new Size(73, 64);
             btnAgregarProducto.TabIndex = 0;
             btnAgregarProducto.Text = "Pagar";
             btnAgregarProducto.TextOffset = new Point(-15, 25);
@@ -357,12 +334,11 @@
             PanelDGVProd.Controls.Add(dgvProductos);
             PanelDGVProd.CustomizableEdges = customizableEdges1;
             PanelDGVProd.Dock = DockStyle.Fill;
-            PanelDGVProd.Location = new Point(0, 190);
-            PanelDGVProd.Margin = new Padding(3, 4, 3, 4);
+            PanelDGVProd.Location = new Point(0, 143);
             PanelDGVProd.Name = "PanelDGVProd";
-            PanelDGVProd.Padding = new Padding(7, 8, 7, 8);
+            PanelDGVProd.Padding = new Padding(6);
             PanelDGVProd.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            PanelDGVProd.Size = new Size(1451, 695);
+            PanelDGVProd.Size = new Size(1270, 521);
             PanelDGVProd.TabIndex = 3;
             // 
             // dgvProductos
@@ -382,7 +358,7 @@
             dgvProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvProductos.ColumnHeadersHeight = 40;
             dgvProductos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvProductos.Columns.AddRange(new DataGridViewColumn[] { FotoProducto, codigo, nProducto, catProd, costoProducto });
+            dgvProductos.Columns.AddRange(new DataGridViewColumn[] { FotoProducto, Cantidad, Fecha, codigo, nProducto, catProd, costoProducto });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Bahnschrift Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -393,16 +369,14 @@
             dgvProductos.DefaultCellStyle = dataGridViewCellStyle3;
             dgvProductos.Dock = DockStyle.Fill;
             dgvProductos.GridColor = Color.FromArgb(231, 229, 255);
-            dgvProductos.Location = new Point(7, 8);
-            dgvProductos.Margin = new Padding(3, 4, 3, 4);
+            dgvProductos.Location = new Point(6, 6);
             dgvProductos.Name = "dgvProductos";
             dgvProductos.ReadOnly = true;
             dgvProductos.RowHeadersVisible = false;
             dgvProductos.RowHeadersWidth = 51;
             dataGridViewCellStyle4.Font = new Font("Bahnschrift Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dgvProductos.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            dgvProductos.RowTemplate.Height = 25;
-            dgvProductos.Size = new Size(1437, 679);
+            dgvProductos.Size = new Size(1258, 509);
             dgvProductos.TabIndex = 0;
             dgvProductos.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgvProductos.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -433,6 +407,18 @@
             FotoProducto.MinimumWidth = 100;
             FotoProducto.Name = "FotoProducto";
             FotoProducto.ReadOnly = true;
+            // 
+            // Cantidad
+            // 
+            Cantidad.HeaderText = "Cantidad";
+            Cantidad.Name = "Cantidad";
+            Cantidad.ReadOnly = true;
+            // 
+            // Fecha
+            // 
+            Fecha.HeaderText = "Fecha";
+            Fecha.Name = "Fecha";
+            Fecha.ReadOnly = true;
             // 
             // codigo
             // 
@@ -465,30 +451,27 @@
             // costoProducto
             // 
             costoProducto.DataPropertyName = "Costo";
-            costoProducto.HeaderText = "Costo";
+            costoProducto.HeaderText = "Total";
             costoProducto.MinimumWidth = 6;
             costoProducto.Name = "costoProducto";
             costoProducto.ReadOnly = true;
             // 
             // CarritoUC
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             Controls.Add(PanelDGVProd);
             Controls.Add(PanelBotonesAccion);
             Controls.Add(panelHeader);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "CarritoUC";
-            Size = new Size(1451, 885);
+            Size = new Size(1270, 664);
             ((System.ComponentModel.ISupportInitialize)errorProductos).EndInit();
             panelHeader.ResumeLayout(false);
             panelBotones.ResumeLayout(false);
             panelBotones.PerformLayout();
             panelTitulo.ResumeLayout(false);
             panelTitulo.PerformLayout();
-            PanelArticulos.ResumeLayout(false);
-            PanelArticulos.PerformLayout();
             PanelBotonesAccion.ResumeLayout(false);
             PanelDGVProd.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvProductos).EndInit();
@@ -504,7 +487,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lblHora;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblFecha;
         private Guna.UI2.WinForms.Guna2Shapes guna2Shapes1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblTotalProductos;
         private Guna.UI2.WinForms.Guna2TextBox txtBuscarProd;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblBuscar;
         private Guna.UI2.WinForms.Guna2ComboBox cmbCategoriaProducto;
@@ -517,6 +499,8 @@
         private Guna.UI2.WinForms.Guna2Panel panelBotones;
         private Guna.UI2.WinForms.Guna2Panel panelTitulo;
         private DataGridViewImageColumn FotoProducto;
+        private DataGridViewTextBoxColumn Cantidad;
+        private DataGridViewTextBoxColumn Fecha;
         private DataGridViewTextBoxColumn codigo;
         private DataGridViewTextBoxColumn nProducto;
         private DataGridViewTextBoxColumn catProd;

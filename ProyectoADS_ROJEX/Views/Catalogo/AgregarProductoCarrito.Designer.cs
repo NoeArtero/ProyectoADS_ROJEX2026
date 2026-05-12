@@ -50,6 +50,7 @@
             btnAgregarUnoProdCarrito = new Guna.UI2.WinForms.Guna2GradientButton();
             guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            lblInventario = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lbltotal = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             panel1 = new Panel();
@@ -87,7 +88,7 @@
             tlpDivisionControlesAgregarProd.RowStyles.Add(new RowStyle(SizeType.Percent, 15F));
             tlpDivisionControlesAgregarProd.RowStyles.Add(new RowStyle(SizeType.Percent, 15F));
             tlpDivisionControlesAgregarProd.RowStyles.Add(new RowStyle(SizeType.Absolute, 15F));
-            tlpDivisionControlesAgregarProd.Size = new Size(333, 323);
+            tlpDivisionControlesAgregarProd.Size = new Size(333, 319);
             tlpDivisionControlesAgregarProd.TabIndex = 3;
             // 
             // guna2Panel4
@@ -97,7 +98,7 @@
             guna2Panel4.Controls.Add(guna2HtmlLabel3);
             guna2Panel4.CustomizableEdges = customizableEdges5;
             guna2Panel4.Dock = DockStyle.Fill;
-            guna2Panel4.Location = new Point(236, 276);
+            guna2Panel4.Location = new Point(236, 272);
             guna2Panel4.Margin = new Padding(3, 2, 3, 2);
             guna2Panel4.Name = "guna2Panel4";
             guna2Panel4.ShadowDecoration.CustomizableEdges = customizableEdges6;
@@ -168,24 +169,35 @@
             // 
             // guna2Panel3
             // 
+            guna2Panel3.Controls.Add(lblInventario);
             guna2Panel3.Controls.Add(lbltotal);
             guna2Panel3.Controls.Add(guna2HtmlLabel1);
             guna2Panel3.CustomizableEdges = customizableEdges7;
             guna2Panel3.Dock = DockStyle.Fill;
-            guna2Panel3.Location = new Point(3, 276);
+            guna2Panel3.Location = new Point(3, 272);
             guna2Panel3.Margin = new Padding(3, 2, 3, 2);
             guna2Panel3.Name = "guna2Panel3";
             guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2Panel3.Size = new Size(227, 45);
             guna2Panel3.TabIndex = 3;
             // 
+            // lblInventario
+            // 
+            lblInventario.BackColor = Color.Transparent;
+            lblInventario.Dock = DockStyle.Bottom;
+            lblInventario.Location = new Point(0, 28);
+            lblInventario.Name = "lblInventario";
+            lblInventario.Size = new Size(97, 17);
+            lblInventario.TabIndex = 2;
+            lblInventario.Text = "guna2HtmlLabel2";
+            // 
             // lbltotal
             // 
-            lbltotal.Anchor = AnchorStyles.Left;
             lbltotal.BackColor = Color.Transparent;
+            lbltotal.Dock = DockStyle.Top;
             lbltotal.Font = new Font("Bahnschrift SemiCondensed", 10.8F);
             lbltotal.ForeColor = Color.DimGray;
-            lbltotal.Location = new Point(3, 14);
+            lbltotal.Location = new Point(0, 0);
             lbltotal.Margin = new Padding(3, 2, 3, 2);
             lbltotal.Name = "lbltotal";
             lbltotal.Size = new Size(128, 19);
@@ -216,7 +228,7 @@
             panel1.Location = new Point(3, 2);
             panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(327, 222);
+            panel1.Size = new Size(327, 219);
             panel1.TabIndex = 0;
             // 
             // picAgregarProdCarrito
@@ -228,7 +240,7 @@
             picAgregarProdCarrito.Margin = new Padding(3, 2, 3, 2);
             picAgregarProdCarrito.Name = "picAgregarProdCarrito";
             picAgregarProdCarrito.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            picAgregarProdCarrito.Size = new Size(327, 222);
+            picAgregarProdCarrito.Size = new Size(327, 219);
             picAgregarProdCarrito.SizeMode = PictureBoxSizeMode.StretchImage;
             picAgregarProdCarrito.TabIndex = 3;
             picAgregarProdCarrito.TabStop = false;
@@ -240,11 +252,11 @@
             guna2Panel1.Controls.Add(guna2Panel2);
             guna2Panel1.CustomizableEdges = customizableEdges13;
             guna2Panel1.Dock = DockStyle.Fill;
-            guna2Panel1.Location = new Point(3, 228);
+            guna2Panel1.Location = new Point(3, 225);
             guna2Panel1.Margin = new Padding(3, 2, 3, 2);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            guna2Panel1.Size = new Size(227, 44);
+            guna2Panel1.Size = new Size(227, 43);
             guna2Panel1.TabIndex = 1;
             // 
             // guna2Panel2
@@ -256,7 +268,7 @@
             guna2Panel2.Margin = new Padding(3, 2, 3, 2);
             guna2Panel2.Name = "guna2Panel2";
             guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2Panel2.Size = new Size(227, 44);
+            guna2Panel2.Size = new Size(227, 43);
             guna2Panel2.TabIndex = 0;
             // 
             // lblProductoNombre
@@ -265,7 +277,7 @@
             lblProductoNombre.BackColor = Color.Transparent;
             lblProductoNombre.Font = new Font("Bahnschrift SemiCondensed", 10.8F);
             lblProductoNombre.ForeColor = Color.DimGray;
-            lblProductoNombre.Location = new Point(3, 11);
+            lblProductoNombre.Location = new Point(3, 10);
             lblProductoNombre.Margin = new Padding(3, 2, 3, 2);
             lblProductoNombre.Name = "lblProductoNombre";
             lblProductoNombre.Size = new Size(120, 19);
@@ -288,11 +300,11 @@
             btnMostrarPrecio.Font = new Font("Bahnschrift SemiCondensed", 10.8F);
             btnMostrarPrecio.ForeColor = Color.Gainsboro;
             btnMostrarPrecio.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            btnMostrarPrecio.Location = new Point(236, 228);
+            btnMostrarPrecio.Location = new Point(236, 225);
             btnMostrarPrecio.Margin = new Padding(3, 2, 3, 2);
             btnMostrarPrecio.Name = "btnMostrarPrecio";
             btnMostrarPrecio.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            btnMostrarPrecio.Size = new Size(94, 44);
+            btnMostrarPrecio.Size = new Size(94, 43);
             btnMostrarPrecio.TabIndex = 2;
             btnMostrarPrecio.Text = "$ 499.00";
             // 
@@ -303,7 +315,7 @@
             Controls.Add(tlpDivisionControlesAgregarProd);
             Margin = new Padding(3, 2, 3, 2);
             Name = "AgregarProductoCarrito";
-            Size = new Size(333, 323);
+            Size = new Size(333, 319);
             tlpDivisionControlesAgregarProd.ResumeLayout(false);
             guna2Panel4.ResumeLayout(false);
             guna2Panel4.PerformLayout();
@@ -333,5 +345,6 @@
         private Guna.UI2.WinForms.Guna2GradientButton btnQuitarUnoProdCarrito;
         private Guna.UI2.WinForms.Guna2GradientButton btnAgregarUnoProdCarrito;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblInventario;
     }
 }

@@ -391,13 +391,13 @@
             btnNuevoUsuario.HoverState.FillColor2 = Color.FromArgb(60, 71, 136);
             btnNuevoUsuario.ImageAlign = HorizontalAlignment.Left;
             btnNuevoUsuario.ImageSize = new Size(25, 25);
-            btnNuevoUsuario.Location = new Point(248, 10);
+            btnNuevoUsuario.Location = new Point(248, 7);
             btnNuevoUsuario.Margin = new Padding(55);
             btnNuevoUsuario.Name = "btnNuevoUsuario";
             btnNuevoUsuario.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnNuevoUsuario.Size = new Size(88, 40);
+            btnNuevoUsuario.Size = new Size(92, 48);
             btnNuevoUsuario.TabIndex = 24;
-            btnNuevoUsuario.Text = "Nuevo usuario";
+            btnNuevoUsuario.Text = "Nuevo Usuario";
             btnNuevoUsuario.Click += btnNuevoUsuario_Click;
             // 
             // btnCancelar

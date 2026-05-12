@@ -6,7 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using ProyectoADS_ROJEX;
-using ProyectoADS_ROJEX.ConexionDB; // Para usar tu conexión
+using ProyectoADS_ROJEX.ConexionDB; 
 
 namespace HerramientasTotal.Views.Productos
 {
@@ -16,7 +16,9 @@ namespace HerramientasTotal.Views.Productos
         {
             InitializeComponent();
 
-            // 1. Cargamos datos reales de la BD al iniciar
+            // Hace que se actualice cada vez que entramos a la pestaña
+            this.VisibleChanged += CatalogoUC_VisibleChanged;
+
             CargarCatalogoDesdeBD();
 
             cmbCategoriaProductoMovimientos.DataSource = new List<string>
@@ -25,21 +27,31 @@ namespace HerramientasTotal.Views.Productos
             };
             cmbCategoriaProductoMovimientos.SelectedIndex = 3;
         }
+        private void CatalogoUC_VisibleChanged(object sender, EventArgs e)
+        {
+     
+            if (this.Visible)
+            {
+                CargarCatalogoDesdeBD();
+            }
+        }
 
-        private void CargarCatalogoDesdeBD()
+        public void CargarCatalogoDesdeBD()
         {
             try
             {
                 using (SqlConnection conn = new SqlConnection(Conexion.AppConnectionString))
                 {
                     conn.Open();
-                    // Traemos los datos de tu vista (Nombre, Precio y la Marca para el título)
-                    string query = "SELECT TOP 8 Nombre, Precio, Marca FROM dbo.Inventario";
+
+                    string query = @"SELECT TOP 8 i.IdProducto, i.Nombre, i.Precio, i.Marca, i.NombreModelo, ip.CantidadDisponible 
+                                     FROM dbo.Inventario i 
+                                     INNER JOIN InfoProducto ip ON i.IdProducto = ip.IdProducto 
+                                     ORDER BY i.IdProducto DESC";
 
                     SqlCommand cmd = new SqlCommand(query, conn);
                     SqlDataReader reader = cmd.ExecuteReader();
 
-                    // Metemos tus 8 controles en una lista para manejarlos con un ciclo
                     var tarjetas = new List<AgregarProductoCarrito>
                     {
                         agregarProductoCarrito1, agregarProductoCarrito2, agregarProductoCarrito3,
@@ -53,16 +65,18 @@ namespace HerramientasTotal.Views.Productos
                         string nombreCompleto = $"{reader["Marca"]} {reader["Nombre"]}";
                         decimal precio = Convert.ToDecimal(reader["Precio"]);
 
-                        // Buscamos la imagen. Si no existe, el método devuelve null y no truena.
-                        Image img = CargarImagenProducto($"{reader["Nombre"]}.jpg");
+                        string idProd = reader["IdProducto"].ToString();
+                        int existencias = Convert.ToInt32(reader["CantidadDisponible"]);
 
-                        // Usamos el método de 3 argumentos que arreglamos antes
-                        tarjetas[i].Configurar(img, nombreCompleto, precio);
+                        string categoria = reader["NombreModelo"].ToString();
+
+                        Image img = CargarImagenProducto($"{idProd}.jpg");
+
+                        tarjetas[i].Configurar(img, nombreCompleto, precio, existencias, idProd, categoria);
                         tarjetas[i].Visible = true;
                         i++;
                     }
 
-                    // Si hay menos de 8 productos, ocultamos las tarjetas sobrantes
                     for (int j = i; j < tarjetas.Count; j++)
                     {
                         tarjetas[j].Visible = false;
@@ -71,20 +85,17 @@ namespace HerramientasTotal.Views.Productos
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al conectar con la BD para el catálogo: " + ex.Message, "Error de Datos");
+                MessageBox.Show("Error al cargar el catálogo: " + ex.Message, "Error de Datos");
             }
         }
 
         private Image CargarImagenProducto(string nombreArchivo)
         {
-            // Ruta limpia combinando la carpeta de ejecución con Resources
             string ruta = Path.Combine(Application.StartupPath, "Resources", "Products", nombreArchivo);
-
             if (!File.Exists(ruta)) return null;
 
             try
             {
-                // Usamos FileStream para que la imagen no se quede "bloqueada" por Windows
                 using (var fs = new FileStream(ruta, FileMode.Open, FileAccess.Read))
                 {
                     return Image.FromStream(fs);

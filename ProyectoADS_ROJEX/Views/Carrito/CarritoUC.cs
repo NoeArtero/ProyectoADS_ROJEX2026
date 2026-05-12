@@ -1,5 +1,6 @@
 ﻿
 using Bogus;
+using ProyectoADS_ROJEX.ConexionDB;
 using ProyectoADS_ROJEX.Views.Carrito;
 using ProyectoADS_ROJEX.Views.NuevoUsuario;
 
@@ -12,18 +13,21 @@ namespace HerramientasTotal.Views.Productos
 
     public partial class CarritoUC : UserControl
     {
-        //conector con la clase ProductoRow
+        
 
         public CarritoUC()
         {
             InitializeComponent();
             dgvProductos.AutoGenerateColumns = false;
             dgvProductos.RowTemplate.Height = 60;
-            CargarDatosProvisionales();
+            
+            ConfigurarColumnas();
+
+            //  Le decimos que cada vez que abrás la pestaña, actualice los datos
+            this.VisibleChanged += CarritoUC_VisibleChanged;
 
 
-
-            // DATOS PROVICIONALES PARA LOS COMBOBOX
+            // DATOS PARA LOS COMBOBOx
             cmbCategoriaProducto.DataSource = new List<string>
             {
                 "Lujo",
@@ -37,10 +41,63 @@ namespace HerramientasTotal.Views.Productos
 
 
 
-            // FIN DATOS PROVICIONALES PARA LOS COMBOBOX
         }
 
-        // valores provisionales para la tabla usando Bogus
+        private void CarritoUC_VisibleChanged(object sender, EventArgs e)
+        {
+            if (this.Visible)
+            {
+                RefrescarDatosCarrito();
+            }
+        }
+        private void ConfigurarColumnas()
+        {
+            // Evitamos que se creen columnas duplicadas
+            dgvProductos.AutoGenerateColumns = false;
+
+            // Validamos que tengas tus 7 columnas dibujadas
+            if (dgvProductos.Columns.Count >= 7)
+            {
+                // Índice 0: Fotografía
+                dgvProductos.Columns[0].DataPropertyName = "Fotografia";
+                if (dgvProductos.Columns[0] is DataGridViewImageColumn colFoto)
+                {
+                    colFoto.ImageLayout = DataGridViewImageCellLayout.Zoom; // Para que la foto se ajuste
+                }
+
+                // Índice 1: Cantidad
+                dgvProductos.Columns[1].DataPropertyName = "Cantidad";
+
+                // Índice 2: Fecha
+                dgvProductos.Columns[2].DataPropertyName = "FechaFormateada";
+
+                // Índice 3: Código
+                dgvProductos.Columns[3].DataPropertyName = "Codigo";
+
+                // Índice 4: Nombre
+                dgvProductos.Columns[4].DataPropertyName = "Nombre";
+
+                // Índice 5: Categoría
+                dgvProductos.Columns[5].DataPropertyName = "Categoria";
+
+                // Índice 6: Total (Esta propiedad ya multiplica Costo * Cantidad solita)
+                dgvProductos.Columns[6].DataPropertyName = "TotalProducto";
+
+                // Opcional: Para que el total salga con el signo de dólar y dos decimales
+                dgvProductos.Columns[6].DefaultCellStyle.Format = "C2";
+            }
+        }
+        
+        public void RefrescarDatosCarrito()
+        {
+            dgvProductos.DataSource = null;
+
+            if (GestorCarrito.ListaProductos != null)
+            {
+                dgvProductos.DataSource = GestorCarrito.ListaProductos;
+            }
+        }
+
 
         private Image CrearImagenProvisional(int ancho, int alto)
         {
@@ -60,28 +117,7 @@ namespace HerramientasTotal.Views.Productos
             return bmp;
         }
 
-        private void CargarDatosProvisionales()
-        {
-            var categorias = new List<string>
-    {
-        "Lujo",
-        "Deportes",
-        "Causales",
-        "Chafas"
-    };
 
-            var faker = new Faker<ProductoCarritoTemp>()
-                .RuleFor(p => p.Fotografia, f => CrearImagenProvisional(50, 50))
-                .RuleFor(p => p.Codigo, f => $"PRD-{f.Random.Number(1000, 9999)}")
-                .RuleFor(p => p.Nombre, f => f.Commerce.ProductName())
-                .RuleFor(p => p.Categoria, f => f.PickRandom(categorias))
-                .RuleFor(p => p.Costo, f => Math.Round(f.Random.Decimal(15, 999), 2));
-
-            var listaProductos = faker.Generate(10);
-
-            dgvProductos.DataSource = null;
-            dgvProductos.DataSource = listaProductos;
-        }
 
         private void btnAgregarProducto_Click(object sender, EventArgs e)
         {
@@ -89,14 +125,8 @@ namespace HerramientasTotal.Views.Productos
             pagarTarjetaUC.Show();
             this.Controls.Add(pagarTarjetaUC);
             pagarTarjetaUC.BringToFront();
-            pagarTarjetaUC.Location = new Point((this.Width - pagarTarjetaUC.Width) / 2
-                                                   , (this.Height - pagarTarjetaUC.Height) / 2);
+            pagarTarjetaUC.Location = new Point((this.Width - pagarTarjetaUC.Width) / 2, (this.Height - pagarTarjetaUC.Height) / 2);
         }
-
-
-
-        // fin valores provisionales para la tabla usando Bogus
-
 
     }
 
