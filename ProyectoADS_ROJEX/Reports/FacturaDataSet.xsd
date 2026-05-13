@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="FacturaDataSet" targetNamespace="http://tempuri.org/FacturaDataSet.xsd" xmlns:mstns="http://tempuri.org/FacturaDataSet.xsd" xmlns="http://tempuri.org/FacturaDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="FacturaDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="FacturaDataSet" msprop:Generator_DataSetName="FacturaDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="FacturaReporte" msprop:Generator_RowEvHandlerName="FacturaReporteRowChangeEventHandler" msprop:Generator_RowDeletedName="FacturaReporteRowDeleted" msprop:Generator_RowDeletingName="FacturaReporteRowDeleting" msprop:Generator_RowEvArgName="FacturaReporteRowChangeEvent" msprop:Generator_TablePropName="FacturaReporte" msprop:Generator_RowChangedName="FacturaReporteRowChanged" msprop:Generator_RowChangingName="FacturaReporteRowChanging" msprop:Generator_TableClassName="FacturaReporteDataTable" msprop:Generator_RowClassName="FacturaReporteRow" msprop:Generator_TableVarName="tableFacturaReporte" msprop:Generator_UserTableName="FacturaReporte">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CIdCompra" msprop:Generator_ColumnPropNameInRow="CIdCompra" msprop:Generator_ColumnPropNameInTable="CIdCompraColumn" msprop:Generator_ColumnVarNameInTable="columnCIdCompra" msprop:Generator_UserColumnName="CIdCompra" type="xs:string" minOccurs="0" />
+              <xs:element name="UsNombre" msprop:Generator_ColumnPropNameInRow="UsNombre" msprop:Generator_ColumnPropNameInTable="UsNombreColumn" msprop:Generator_ColumnVarNameInTable="columnUsNombre" msprop:Generator_UserColumnName="UsNombre" type="xs:string" minOccurs="0" />
+              <xs:element name="lstProductos" msprop:Generator_ColumnPropNameInRow="lstProductos" msprop:Generator_ColumnPropNameInTable="lstProductosColumn" msprop:Generator_ColumnVarNameInTable="columnlstProductos" msprop:Generator_UserColumnName="lstProductos" type="xs:string" minOccurs="0" />
+              <xs:element name="subTot" msprop:Generator_ColumnPropNameInRow="subTot" msprop:Generator_ColumnPropNameInTable="subTotColumn" msprop:Generator_ColumnVarNameInTable="columnsubTot" msprop:Generator_UserColumnName="subTot" type="xs:string" minOccurs="0" />
+              <xs:element name="DirEnvio" msprop:Generator_ColumnPropNameInRow="DirEnvio" msprop:Generator_ColumnPropNameInTable="DirEnvioColumn" msprop:Generator_ColumnVarNameInTable="columnDirEnvio" msprop:Generator_UserColumnName="DirEnvio" type="xs:string" minOccurs="0" />
+              <xs:element name="FPedido" msprop:Generator_ColumnPropNameInRow="FPedido" msprop:Generator_ColumnPropNameInTable="FPedidoColumn" msprop:Generator_ColumnVarNameInTable="columnFPedido" msprop:Generator_UserColumnName="FPedido" type="xs:string" minOccurs="0" />
+              <xs:element name="Fentrega" msprop:Generator_ColumnPropNameInRow="Fentrega" msprop:Generator_ColumnPropNameInTable="FentregaColumn" msprop:Generator_ColumnVarNameInTable="columnFentrega" msprop:Generator_UserColumnName="Fentrega" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

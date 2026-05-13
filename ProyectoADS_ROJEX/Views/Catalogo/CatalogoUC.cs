@@ -45,7 +45,7 @@ namespace HerramientasTotal.Views.Productos
                     conn.Open();
 
                     string query = @"SELECT TOP 8 i.IdProducto, i.Nombre, i.Precio, i.Marca, i.NombreModelo, ip.CantidadDisponible 
-                                     FROM dbo.Inventario i 
+                                     FROM dbo.InventarioA i 
                                      INNER JOIN InfoProducto ip ON i.IdProducto = ip.IdProducto 
                                      ORDER BY i.IdProducto DESC";
 
